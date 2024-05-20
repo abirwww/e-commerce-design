@@ -1,4 +1,4 @@
-<h3>Welcome to ! Lawyer-Landing-Page Portfolio Project</h3>
+<h3>Welcome to ! E-COMMERCE Portfolio Project</h3>
 <p></p>
 
 <h3>Technologys</h3>
@@ -18,6 +18,7 @@
 <h3>Specialization</h3>
 <ol>
 <li>All device friendly design</li>
-<li>Font Awesome</li>
-<li>Google Fonts</li>
+<li>SEO Friendly</li>
+<li>Fast Loading</li>
+<li>Fully optimised</li>
 </ol>
