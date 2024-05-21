@@ -1,0 +1,68 @@
+nav{
+    .nav_body{
+        // border: var(--border);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 18px 0px;
+        .logo{
+            img{
+                height: 65px;
+            }
+        }
+        .menu{
+            // border: var(--border);
+            .menue_list{
+                    // border: var(--border);
+                    display: flex; 
+                    justify-content: space-between;
+                    height: 100%;
+                    align-items: center;
+                    gap: 65px;
+                    li{ 
+                        a{  
+                            font-size: 18px;
+                            color: var(--black);
+                            position: relative;
+
+                            &::after{
+                                content: '';
+                                height: 2px;
+                                width: 0px;
+                                position: absolute;
+                                bottom: -10px;
+                                left: -10px;      
+                                background: linear-gradient(147.38deg, rgba(12, 104, 244, 0.3) 60.98%, rgba(12, 104, 244, 0.7) 81.93%, rgba(12, 104, 244, 0.3) 99.45%);
+                                transition-duration: .2s;
+                            }
+                            &:hover{
+                                color: var(--primary);
+                                &::after{
+                                    width: calc(100% + 30px);
+                                }
+                            }
+                        }
+                    }
+            } 
+        }
+        .action_menues{
+        // border: var(--border);
+            ul{
+                display: flex; 
+                    justify-content: space-between;
+                    height: 100%;
+                    align-items: center;
+                    
+                li{
+                    
+                    a{
+                       
+                        img{
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
