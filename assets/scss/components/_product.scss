@@ -1,0 +1,42 @@
+.product_item{
+    padding: 8px;
+    border-radius: 8px;
+    background-color: var(--white);
+    position: relative;
+    .img{
+        margin-bottom: 12px;
+    }
+    .title{
+        h2{
+            font-size: 12px;
+            line-height: 22px;
+            margin-top: 12px;
+            margin-bottom: 10px;
+        }
+    }
+    .discount{
+        background-color: rgb(227, 162, 115);
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        position: absolute;
+        left: 0px;
+        top: 8px;
+        padding: 6px;
+        font-size: 12px;
+        color: chocolate;
+    }
+    .price_area{
+        display: flex;
+        justify-content: space-between;
+    }
+    .del_price{
+        color: rgb(167, 164, 164);
+        font-size: 13px;
+    }
+    .price{
+        font-size: 14px;
+    }
+    &.product_v1{
+
+    }
+}
