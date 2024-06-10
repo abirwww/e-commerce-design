@@ -686,87 +686,102 @@ nav .nav_body .action_menues ul li {
   padding: 15px 10px;
 }
 
-#top_footer {
-  background-color: #0f6e8c;
+footer .top {
+  background: rgb(9, 81, 190);
+  background: radial-gradient(circle, rgb(9, 81, 190) -361%, rgb(2, 23, 54) 113%);
+  padding-top: 48px;
 }
-#top_footer .top_footer_content {
-  padding: 50px 0px;
-  display: flex;
-  flex-wrap: wrap;
-}
-@media (min-width: 768px) and (max-width: 991.9px) {
-  #top_footer .top_footer_content {
-    flex-wrap: nowrap;
-  }
-}
-@media (min-width: 576px) and (max-width: 767.9px) {
-  #top_footer .top_footer_content {
-    flex-wrap: nowrap;
-  }
-}
-@media (min-width: 0px) and (max-width: 575.9px) {
-  #top_footer .top_footer_content {
-    text-align: center;
-  }
-}
-#top_footer .top_footer_content .logo {
-  width: 300px;
-}
-@media (min-width: 0px) and (max-width: 575.9px) {
-  #top_footer .top_footer_content .logo {
-    width: 415px;
-    display: inline-block;
-    text-align: center;
-  }
-}
-#top_footer .top_footer_content .footer_links {
-  width: 180px;
-  color: white;
-  font-size: 20px;
-  font-weight: 500;
-}
-@media (min-width: 0px) and (max-width: 575.9px) {
-  #top_footer .top_footer_content .footer_links {
-    width: 289px;
-    margin-left: 20px;
-  }
-}
-#top_footer .top_footer_content .footer_links ul li a {
-  color: rgb(204, 200, 200);
-}
-
-#bottom_footer {
-  background-color: var(--brand-deep);
-  padding: 10px;
-}
-@media (min-width: 0px) and (max-width: 575.9px) {
-  #bottom_footer {
-    padding-left: 0px;
-  }
-}
-#bottom_footer .bottom_footer_content {
-  display: flex;
+footer .top .footer_top_content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 292px);
   justify-content: space-between;
 }
-@media (min-width: 0px) and (max-width: 575.9px) {
-  #bottom_footer .bottom_footer_content .left h6 {
-    font-size: 9px;
-  }
+footer .top .footer_top_content .footer_item h3 {
+  color: white;
+  font-size: 16px;
+  line-height: 14px;
+  margin-bottom: 15px;
 }
-#bottom_footer .bottom_footer_content .right ul li {
-  display: contents;
+footer .top .footer_top_content .footer_item ul li {
+  margin-bottom: 10px;
 }
-#bottom_footer .bottom_footer_content .right ul li a i {
-  border-radius: 50%;
-  background-color: var(--brand-light);
-  color: rgb(189, 187, 187);
-  height: 30px;
-  width: 30px;
-  line-height: 30px;
-  text-align: center;
+footer .top .footer_top_content .footer_item ul li a {
+  display: flex;
   align-items: center;
-  display: inline-block;
+  font-size: 14px;
+  color: white;
 }
+footer .top .footer_top_content .footer_item ul li a img {
+  padding-right: 5px;
+}
+footer .top .footer_top_content .footer_item ul li a i {
+  padding-right: 5px;
+}
+footer .top .footer_top_content .footer_item .s_icon {
+  display: flex;
+  gap: 10px;
+}
+footer .bottom {
+  background-color: #021736;
+  padding: 16px;
+}
+footer .bottom .footer_bottom_content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+footer .bottom .footer_bottom_content .left p {
+  color: white;
+  font-size: 12px;
+}
+footer .right ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+footer .right ul li a {
+  color: white;
+  font-size: 12px;
+}
+
+.subscribe_form {
+  position: relative;
+  margin-bottom: 20px;
+}
+.subscribe_form .icon {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.subscribe_form .input {
+  width: 100%;
+  padding: 12px 36px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: white;
+}
+.subscribe_form .button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.subscribe_form .button i {
+  color: white;
+}
+
 .banner_content {
   display: grid;
   grid-template-columns: 500px 1fr;
