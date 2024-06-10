@@ -1,0 +1,15 @@
+.shipping_area{
+    padding-bottom: 50px;
+    .shipping_content{
+        display: flex;
+        justify-content: space-between;
+        .contents{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .tech_content{
+
+        }
+    }
+}
