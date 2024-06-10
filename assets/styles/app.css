@@ -302,6 +302,21 @@ h3 {
 .product_item .price {
   font-size: 14px;
 }
+.section_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.section_heading h2 {
+  font-size: 32px;
+  line-height: 32px;
+  padding-bottom: 18px;
+}
+.section_heading div {
+  font-size: 16px;
+}
+
 .container {
   width: 1400px;
   margin: auto;
@@ -790,6 +805,9 @@ nav .nav_body .action_menues ul li {
   text-align: center;
   font-weight: 400;
 }
+.top_categories .img {
+  text-align: center;
+}
 
 .top_sales_part {
   background-color: var(--navy-blue);
@@ -836,6 +854,153 @@ nav .nav_body .action_menues ul li {
   display: flex;
   justify-content: flex-end;
   margin: 10px;
+}
+
+.product_list_2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 255px));
+  gap: 50px;
+  padding: 48px 0px;
+}
+.product_list_2 .product_item_2 {
+  max-width: 255px;
+  box-shadow: -2px 2px 15px -1px rgb(173, 168, 168);
+  padding: 16px;
+  display: grid;
+}
+.product_list_2 .product_item_2 .top {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.product_list_2 .product_item_2 .top .img img {
+  transition-duration: 0.3s;
+}
+.product_list_2 .product_item_2 .top .favorite {
+  position: absolute;
+  top: 0px;
+  left: -35px;
+  font-size: 24px;
+  color: black;
+  z-index: 9;
+  transition-duration: 0.3s;
+}
+.product_list_2 .product_item_2 .top .color_list {
+  position: absolute;
+  right: 0;
+  z-index: 9;
+  top: 50%;
+  transform: translate(-50%);
+}
+.product_list_2 .product_item_2 .top .color_list li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.product_list_2 .product_item_2 .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product_list_2 .product_item_2 .bottom img {
+  width: 200px;
+  margin-bottom: 5px;
+}
+.product_list_2 .product_item_2 .bottom .title a h3 {
+  font-size: 16px;
+  text-align: center;
+  color: var(--black);
+}
+.product_list_2 .product_item_2 .bottom .price {
+  display: flex;
+  justify-content: space-between;
+}
+.product_list_2 .product_item_2 .bottom .price .right {
+  color: var(--navy-blue);
+}
+.product_list_2 .product_item_2:hober .top .img img {
+  transform: scale(1.2);
+}
+#offers {
+  padding-bottom: 50px;
+}
+#offers .container .offer_contents {
+  display: grid;
+  grid-template-columns: 1fr 444px;
+  gap: 30px;
+}
+#offers .container .offer_contents .left .left_content {
+  background-image: url(/assets/offer/left_bg.png);
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 20px;
+  height: 420px;
+}
+#offers .container .offer_contents .left .left_content .content_left .offer_title {
+  font-size: 20px;
+  color: white;
+  padding-left: 30px;
+}
+#offers .container .offer_contents .left .left_content .content_left .offer_title span {
+  color: black;
+}
+#offers .container .offer_contents .left .left_content .content_left .product_image img {
+  width: 300px;
+}
+#offers .container .offer_contents .left .left_content .content_right ul {
+  width: 244px;
+  display: flex;
+  padding: 20px 0px;
+  gap: 5px;
+}
+#offers .container .offer_contents .left .left_content .content_right ul li {
+  border: 1px solid black;
+  padding: 2px;
+  gap: 5px;
+  border-radius: 8px;
+  text-align: center;
+}
+#offers .container .offer_contents .left .left_content .content_right ul a {
+  padding: 30px;
+}
+#offers .container .offer_contents .right .right_content .background-container {
+  background-image: url("/assets/offer/right_bg.png");
+  width: 444px;
+  height: 420px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-bottom: 50px;
+  padding-left: 70px;
+}
+.container .highlited_brand {
+  background-image: url(/assets/images/smart_watch/banner.png);
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0px;
+  align-items: center;
+}
+.container .highlited_brand .left {
+  text-align: center;
+}
+.container .highlited_brand .left .watch_title {
+  font-size: 45px;
+  color: white;
+  line-height: 70px;
+}
+.container .highlited_brand .left .watch_description {
+  color: white;
+  padding-bottom: 15px;
+  font-size: 20px;
+}
+.container .highlited_brand .right .img img {
+  padding: 50px;
+  padding-right: 100px;
 }
 
 /*# sourceMappingURL=app.css.map */

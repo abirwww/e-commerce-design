@@ -1,0 +1,31 @@
+.container{
+    .highlited_brand{
+        background-image: url(/assets/images/smart_watch/banner.png);
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0px;
+        align-items: center;
+        .left{
+            text-align: center;
+            .watch_title{
+                font-size: 45px;
+                color: white;
+                line-height: 70px;
+            }
+            .watch_description{
+                color: white;
+                padding-bottom: 15px;
+                font-size: 20px;
+            }
+            }
+        .right{
+            .img{
+                img{
+                    padding: 50px;
+                    padding-right: 100px;
+                }
+            }
+        }
+    }
+}

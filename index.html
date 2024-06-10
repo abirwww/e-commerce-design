@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,439 +16,523 @@
     <script src="./js/app.js" defer></script>
 
 </head>
-
 <body>
-<header>
-    <nav class="container">
-        <div class="nav_body">
-            <div class="logo">
-                <img src="./assets/images/logo/logo.svg" alt="">
+    <header>
+        <nav class="container">
+            <div class="nav_body">
+                <div class="logo">
+                    <img src="./assets/images/logo/logo.svg" alt="">
+                </div>
+                <div class="menu">
+                    <ul class="menue_list">
+                        <li><a href="#">Home</a></li>
+                        <li>
+                            <a href="#" onclick="product_category_jumbo_menu.classList.toggle('active')">Products</a>
+
+
+                        </li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="action_menues">
+                    <ul>
+                        <li>
+                            <a onclick="event.preventDefault(); search_modal.classList.toggle('active')" href="#"><img
+                                    src="./assets/images/icons/search.svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="cart_items.classList.toggle('active')">
+                                <img src="./assets/images/icons/card.svg" alt="">
+                            </a>
+
+                            <div class="cart_items" id="cart_items">
+                                <div class="top">
+                                    <h3 class="cart_top_title">3 items</h3>
+                                </div>
+                                <div class="mid">
+                                    <div class="cart_item_list">
+                                        <div class="cart_item">
+                                            <div class="img">
+                                                <img src="./assets/images/products/cart_image2.png" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA
+                                                    13.3 inch</h3>
+                                                <h4 class="color">Black</h4>
+                                                <div class="qty"> x 1</div>
+
+                                                <div class="extra_features">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="img">
+                                                                <img src="./assets/images/icons/truck/truck.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                Free Delivery
+                                                            </div>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="img">
+                                                                <img src="./assets/images/icons/verify/verify.png"
+                                                                    alt="">
+                                                            </div>
+                                                            <div>
+                                                                Guaranteed
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+
+                                                <div class="qty_changer">
+                                                    <div class="price">
+                                                        $433.00
+                                                    </div>
+                                                    <div class="qty_updater">
+                                                        <button>
+                                                            <img src="./assets/images/icons/trash/trash.png" alt="">
+                                                        </button>
+
+                                                        <div class="qty_input">
+                                                            <button onclick="decrement_cart()">
+                                                                <img src="./assets/images/icons/minus/minus.png" alt="">
+                                                            </button>
+                                                            <input type="number" value="1" min="1">
+                                                            <button onclick="increment_cart()">
+                                                                <img src="./assets/images/icons/add/add.png" alt="">
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="cart_item">
+                                            <div class="img">
+                                                <img src="./assets/images/products/cart_image.png" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA
+                                                    13.3 inch</h3>
+                                                <h4 class="color">Black</h4>
+                                                <div class="qty"> x 1</div>
+
+                                                <div class="extra_features">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="img">
+                                                                <img src="./assets/images/icons/truck/truck.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                Free Delivery
+                                                            </div>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="img">
+                                                                <img src="./assets/images/icons/verify/verify.png"
+                                                                    alt="">
+                                                            </div>
+                                                            <div>
+                                                                Guaranteed
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+
+                                                <div class="qty_changer">
+                                                    <div class="price">
+                                                        $433.00
+                                                    </div>
+                                                    <div class="qty_updater">
+                                                        <button>
+                                                            <img src="./assets/images/icons/trash/trash.png" alt="">
+                                                        </button>
+
+                                                        <div class="qty_input">
+                                                            <button onclick="decrement_cart()">
+                                                                <img src="./assets/images/icons/minus/minus.png" alt="">
+                                                            </button>
+                                                            <input type="number" value="1" min="1">
+                                                            <button onclick="increment_cart()">
+                                                                <img src="./assets/images/icons/add/add.png" alt="">
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="cart_item">
+                                            <div class="img">
+                                                <img src="./assets/images/products/cart_image1.png" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA
+                                                    13.3 inch</h3>
+                                                <h4 class="color">Black</h4>
+                                                <div class="qty"> x 1</div>
+
+                                                <div class="extra_features">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="img">
+                                                                <img src="./assets/images/icons/truck/truck.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                Free Delivery
+                                                            </div>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="img">
+                                                                <img src="./assets/images/icons/verify/verify.png"
+                                                                    alt="">
+                                                            </div>
+                                                            <div>
+                                                                Guaranteed
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+
+                                                <div class="qty_changer">
+                                                    <div class="price">
+                                                        $433.00
+                                                    </div>
+                                                    <div class="qty_updater">
+                                                        <button>
+                                                            <img src="./assets/images/icons/trash/trash.png" alt="">
+                                                        </button>
+
+                                                        <div class="qty_input">
+                                                            <button onclick="decrement_cart()">
+                                                                <img src="./assets/images/icons/minus/minus.png" alt="">
+                                                            </button>
+                                                            <input type="number" value="1" min="1">
+                                                            <button onclick="increment_cart()">
+                                                                <img src="./assets/images/icons/add/add.png" alt="">
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bottom">
+                                    <div class="left">
+                                        <h5 class="title">Grand total</h5>
+                                        <h4 class="amount">$543.02</h4>
+                                    </div>
+                                    <div class="right">
+                                        <a href="">
+                                            <span class="title">
+                                                Proceed to Cart
+                                            </span>
+                                            <img src="./assets/images/icons/addToCart/shopping-cart.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="#" onclick="user_drop_down_actions.classList.toggle('active')"><img
+                                    src="./assets/images/icons/profile.svg" alt=""></a>
+                            <div id="user_drop_down_actions" class="user_drop_down_actions">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="icon">
+                                                <img src="./assets/images/icons/profile_icons/profile_icon_1.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h4>Jimmy Smith</h4>
+                                                <p>smith1996@gmail.com</p>
+                                            </div>
+                                        </a>
+
+
+
+                                        <a href="">
+                                            <div class="icon">
+                                                <img src="./assets/images/icons/profile_icons/profile_icon_2.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h4>Orders</h4>
+                                            </div>
+                                        </a>
+
+
+
+                                        <a href="">
+                                            <div class="icon">
+                                                <img src="./assets/images/icons/profile_icons/profile_icon_3.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h4>Wish List</h4>
+                                            </div>
+                                        </a>
+
+
+
+                                        <a href="">
+                                            <div class="icon">
+                                                <img src="./assets/images/icons/profile_icons/profile_icon_4.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h4>Payments</h4>
+                                            </div>
+                                        </a>
+
+
+
+                                        <a href="">
+                                            <div class="icon">
+                                                <img src="./assets/images/icons/profile_icons/profile_icon_5.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h4>Log out</h4>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="menu">
-                <ul class="menue_list">
-                    <li><a href="#">Home</a></li>
-                    <li>
-                        <a href="#" onclick="product_category_jumbo_menu.classList.toggle('active')">Products</a>
+        </nav>
+    </header>
 
-
-                    </li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="action_menues">
-                <ul>
-                    <li>
-                        <a onclick="event.preventDefault(); search_modal.classList.toggle('active')" href="#"><img src="./assets/images/icons/search.svg" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#" onclick="cart_items.classList.toggle('active')">
-                            <img src="./assets/images/icons/card.svg" alt="">
-                        </a>
-
-                        <div class="cart_items" id="cart_items">
-                            <div class="top">
-                                <h3 class="cart_top_title">3 items</h3>
-                            </div>
-                            <div class="mid">
-                                <div class="cart_item_list">
-                                    <div class="cart_item">
-                                        <div class="img">
-                                            <img src="./assets/images/products/cart_image2.png" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA 
-                                                13.3 inch</h3>
-                                                <h4 class="color">Black</h4>
-                                                <div class="qty"> x 1</div>
-
-                                                <div class="extra_features">
-                                                    <ul>
-                                                        <li>
-                                                            <div class="img">
-                                                                <img src="./assets/images/icons/truck/truck.png" alt="">
-                                                            </div>
-                                                            <div>
-                                                                Free Delivery
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div class="img">
-                                                                <img src="./assets/images/icons/verify/verify.png" alt="">
-                                                            </div>
-                                                            <div>
-                                                                Guaranteed
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-
-
-                                                <div class="qty_changer">
-                                                    <div class="price">
-                                                        $433.00
-                                                    </div>
-                                                    <div class="qty_updater">
-                                                        <button>
-                                                            <img src="./assets/images/icons/trash/trash.png" alt="">
-                                                        </button>
-
-                                                        <div class="qty_input">
-                                                            <button onclick="decrement_cart()">
-                                                                <img src="./assets/images/icons/minus/minus.png" alt="">
-                                                            </button>
-                                                            <input type="number" value="1" min="1">
-                                                            <button onclick="increment_cart()">
-                                                                <img src="./assets/images/icons/add/add.png" alt="">
-                                                            </button>  
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                        </div>
-                                    </div>
-                                    <div class="cart_item">
-                                        <div class="img">
-                                            <img src="./assets/images/products/cart_image.png" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA 
-                                                13.3 inch</h3>
-                                                <h4 class="color">Black</h4>
-                                                <div class="qty"> x 1</div>
-
-                                                <div class="extra_features">
-                                                    <ul>
-                                                        <li>
-                                                            <div class="img">
-                                                                <img src="./assets/images/icons/truck/truck.png" alt="">
-                                                            </div>
-                                                            <div>
-                                                                Free Delivery
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div class="img">
-                                                                <img src="./assets/images/icons/verify/verify.png" alt="">
-                                                            </div>
-                                                            <div>
-                                                                Guaranteed
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-
-
-                                                <div class="qty_changer">
-                                                    <div class="price">
-                                                        $433.00
-                                                    </div>
-                                                    <div class="qty_updater">
-                                                        <button>
-                                                            <img src="./assets/images/icons/trash/trash.png" alt="">
-                                                        </button>
-
-                                                        <div class="qty_input">
-                                                            <button onclick="decrement_cart()">
-                                                                <img src="./assets/images/icons/minus/minus.png" alt="">
-                                                            </button>
-                                                            <input type="number" value="1" min="1">
-                                                            <button onclick="increment_cart()">
-                                                                <img src="./assets/images/icons/add/add.png" alt="">
-                                                            </button>  
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                        </div>
-                                    </div>
-                                    <div class="cart_item">
-                                        <div class="img">
-                                            <img src="./assets/images/products/cart_image1.png" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA 
-                                                13.3 inch</h3>
-                                                <h4 class="color">Black</h4>
-                                                <div class="qty"> x 1</div>
-
-                                                <div class="extra_features">
-                                                    <ul>
-                                                        <li>
-                                                            <div class="img">
-                                                                <img src="./assets/images/icons/truck/truck.png" alt="">
-                                                            </div>
-                                                            <div>
-                                                                Free Delivery
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div class="img">
-                                                                <img src="./assets/images/icons/verify/verify.png" alt="">
-                                                            </div>
-                                                            <div>
-                                                                Guaranteed
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-
-
-                                                <div class="qty_changer">
-                                                    <div class="price">
-                                                        $433.00
-                                                    </div>
-                                                    <div class="qty_updater">
-                                                        <button>
-                                                            <img src="./assets/images/icons/trash/trash.png" alt="">
-                                                        </button>
-
-                                                        <div class="qty_input">
-                                                            <button onclick="decrement_cart()">
-                                                                <img src="./assets/images/icons/minus/minus.png" alt="">
-                                                            </button>
-                                                            <input type="number" value="1" min="1">
-                                                            <button onclick="increment_cart()">
-                                                                <img src="./assets/images/icons/add/add.png" alt="">
-                                                            </button>  
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="bottom">
-                                <div class="left">
-                                    <h5 class="title">Grand total</h5>
-                                    <h4 class="amount">$543.02</h4>
-                                </div>
-                                <div class="right">
-                                    <a href="">
-                                        <span class="title">
-                                            Proceed to Cart
-                                        </span>
-                                        <img src="./assets/images/icons/addToCart/shopping-cart.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="#" onclick="user_drop_down_actions.classList.toggle('active')"><img src="./assets/images/icons/profile.svg" alt=""></a>
-                        <div id="user_drop_down_actions" class="user_drop_down_actions">
+    <section id="product_category_jumbo_menu" class="">
+        <div class="container">
+            <div class="product_list_menu">
+                <div class="overly">
+                    <div class="product_categorys">
+                        <div class="category_list">
                             <ul>
                                 <li>
-                                    <a href="#">
-                                        <div class="icon">
-                                            <img src="./assets/images/icons/profile_icons/profile_icon_1.png" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h4>Jimmy Smith</h4>
-                                            <p>smith1996@gmail.com</p>
-                                        </div>
+                                    <a href="#" class="svg_icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z"
+                                                fill="#0C0C0C" />
+                                        </svg>
+                                        <span class="text">Mobile Phones</span>
                                     </a>
-                                
+                                </li>
 
-                            
-                                    <a href="">
-                                        <div class="icon">
-                                            <img src="./assets/images/icons/profile_icons/profile_icon_2.png" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h4>Orders</h4>
-                                        </div>
+                                <li>
+                                    <a href="#" class="svg_icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z"
+                                                fill="#0C0C0C" />
+                                        </svg>
+                                        <span class="text">Mobile Phones</span>
                                     </a>
-                                
+                                </li>
 
-                            
-                                    <a href="">
-                                        <div class="icon">
-                                            <img src="./assets/images/icons/profile_icons/profile_icon_3.png" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h4>Wish List</h4>
-                                        </div>
+                                <li>
+                                    <a href="#" class="svg_icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z"
+                                                fill="#0C0C0C" />
+                                        </svg>
+                                        <span class="text">Mobile Phones</span>
                                     </a>
-                                
+                                </li>
 
-                            
-                                    <a href="">
-                                        <div class="icon">
-                                            <img src="./assets/images/icons/profile_icons/profile_icon_4.png" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h4>Payments</h4>
-                                        </div>
+                                <li>
+                                    <a href="#" class="svg_icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z"
+                                                fill="#0C0C0C" />
+                                        </svg>
+                                        <span class="text">Mobile Phones</span>
                                     </a>
-                                
+                                </li>
 
-                            
-                                    <a href="">
-                                        <div class="icon">
-                                            <img src="./assets/images/icons/profile_icons/profile_icon_5.png" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h4>Log out</h4>
-                                        </div>
+                                <li>
+                                    <a href="#" class="svg_icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z"
+                                                fill="#0C0C0C" />
+                                        </svg>
+                                        <span class="text">Mobile Phones</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="svg_icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z"
+                                                fill="#0C0C0C" />
+                                        </svg>
+                                        <span class="text">Mobile Phones</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="svg_icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z"
+                                                fill="#0C0C0C" />
+                                        </svg>
+                                        <span class="text">Mobile Phones</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="svg_icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z"
+                                                fill="#0C0C0C" />
+                                        </svg>
+                                        <span class="text">Mobile Phones</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="svg_icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z"
+                                                fill="#0C0C0C" />
+                                            <path
+                                                d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z"
+                                                fill="#0C0C0C" />
+                                        </svg>
+                                        <span class="text">Mobile Phones</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-
-
-<section id="product_category_jumbo_menu" class="">
-    <div class="container">
-        <div class="product_list_menu">
-            <div class="overly">
-                <div class="product_categorys">
-                    <div class="category_list">
-                        <ul>
-                            <li>
-                                <a href="#" class="svg_icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z" fill="#0C0C0C"/>
-                                        <path d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z" fill="#0C0C0C"/>
-                                        <path d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z" fill="#0C0C0C"/>
-                                        </svg>                                                        
-                                    <span class="text">Mobile Phones</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="svg_icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z" fill="#0C0C0C"/>
-                                        <path d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z" fill="#0C0C0C"/>
-                                        <path d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z" fill="#0C0C0C"/>
-                                        </svg>                                                        
-                                    <span class="text">Mobile Phones</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="svg_icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z" fill="#0C0C0C"/>
-                                        <path d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z" fill="#0C0C0C"/>
-                                        <path d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z" fill="#0C0C0C"/>
-                                        </svg>                                                        
-                                    <span class="text">Mobile Phones</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="svg_icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z" fill="#0C0C0C"/>
-                                        <path d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z" fill="#0C0C0C"/>
-                                        <path d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z" fill="#0C0C0C"/>
-                                        </svg>                                                        
-                                    <span class="text">Mobile Phones</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="svg_icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z" fill="#0C0C0C"/>
-                                        <path d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z" fill="#0C0C0C"/>
-                                        <path d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z" fill="#0C0C0C"/>
-                                        </svg>                                                        
-                                    <span class="text">Mobile Phones</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="svg_icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z" fill="#0C0C0C"/>
-                                        <path d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z" fill="#0C0C0C"/>
-                                        <path d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z" fill="#0C0C0C"/>
-                                        </svg>                                                        
-                                    <span class="text">Mobile Phones</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="svg_icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z" fill="#0C0C0C"/>
-                                        <path d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z" fill="#0C0C0C"/>
-                                        <path d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z" fill="#0C0C0C"/>
-                                        </svg>                                                        
-                                    <span class="text">Mobile Phones</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="svg_icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z" fill="#0C0C0C"/>
-                                        <path d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z" fill="#0C0C0C"/>
-                                        <path d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z" fill="#0C0C0C"/>
-                                        </svg>                                                        
-                                    <span class="text">Mobile Phones</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="svg_icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z" fill="#0C0C0C"/>
-                                        <path d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z" fill="#0C0C0C"/>
-                                        <path d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z" fill="#0C0C0C"/>
-                                        </svg>                                                        
-                                    <span class="text">Mobile Phones</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                         <div class="sub_category_list">
                             <div class="subcategory">
 
                                 <ul>
                                     <li>
                                         <a href="#" class="svg_icon">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z" fill="#0C0C0C"/>
-                                                <path d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z" fill="#0C0C0C"/>
-                                                <path d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z" fill="#0C0C0C"/>
-                                                </svg>                                                        
-                                            
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z"
+                                                    fill="#0C0C0C" />
+                                                <path
+                                                    d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z"
+                                                    fill="#0C0C0C" />
+                                                <path
+                                                    d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z"
+                                                    fill="#0C0C0C" />
+                                            </svg>
+
                                         </a>
                                         <p class="text" style="font-size: 18px;">Smart Phones</p>
                                     </li>
                                     <li>
                                         <a href="#" class="svg_icon">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z" fill="#0C0C0C"/>
-                                                <path d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z" fill="#0C0C0C"/>
-                                                <path d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z" fill="#0C0C0C"/>
-                                                </svg>                                                        
-                                            
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15 22.75H9C4.59 22.75 3.25 21.41 3.25 17V7C3.25 2.59 4.59 1.25 9 1.25H15C19.41 1.25 20.75 2.59 20.75 7V17C20.75 21.41 19.41 22.75 15 22.75ZM9 2.75C5.42 2.75 4.75 3.43 4.75 7V17C4.75 20.57 5.42 21.25 9 21.25H15C18.58 21.25 19.25 20.57 19.25 17V7C19.25 3.43 18.58 2.75 15 2.75H9Z"
+                                                    fill="#0C0C0C" />
+                                                <path
+                                                    d="M14 6.25H10C9.59 6.25 9.25 5.91 9.25 5.5C9.25 5.09 9.59 4.75 10 4.75H14C14.41 4.75 14.75 5.09 14.75 5.5C14.75 5.91 14.41 6.25 14 6.25Z"
+                                                    fill="#0C0C0C" />
+                                                <path
+                                                    d="M11.9992 19.86C10.7292 19.86 9.69922 18.83 9.69922 17.56C9.69922 16.29 10.7292 15.26 11.9992 15.26C13.2692 15.26 14.2992 16.29 14.2992 17.56C14.2992 18.83 13.2692 19.86 11.9992 19.86ZM11.9992 16.75C11.5592 16.75 11.1992 17.11 11.1992 17.55C11.1992 17.99 11.5592 18.35 11.9992 18.35C12.4392 18.35 12.7992 17.99 12.7992 17.55C12.7992 17.11 12.4392 16.75 11.9992 16.75Z"
+                                                    fill="#0C0C0C" />
+                                            </svg>
+
                                         </a>
                                         <p class="text" style="font-size: 18px;">Accessories</p>
                                     </li>
                                     <li class="view_all">
-                                        <a href="#" >
+                                        <a href="#">
                                             View All
                                         </a>
                                     </li>
@@ -465,59 +548,61 @@
                                         <img src="/assets/images/products/p1.png" alt="">
                                         <a href="#">
                                             <h4>Watch & Earpods</h4>
-                                        </a>  
+                                        </a>
                                     </div>
                                     <div class="nav_product">
                                         <img src="/assets/images/products/p2.png" alt="">
                                         <a href="#">
                                             <h4>Holder</h4>
-                                        </a>  
+                                        </a>
                                     </div>
                                     <div class="nav_product">
                                         <img src="/assets/images/products/p3.png" alt="">
                                         <a href="#">
                                             <h4>Power cables</h4>
-                                        </a>  
+                                        </a>
                                     </div>
                                     <div class="nav_product">
                                         <img src="/assets/images/products/p4.png" alt="">
                                         <a href="#">
                                             <h4>Cases & Action</h4>
-                                        </a>  
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="search_modal">
-    <div class="search_overly">
-        <div class="search_card" x-data="{search_key: ``}">
-            <div class="top">
-                <form class="search_form" action="">
-                    <div class="search_input">
-                        <input x-model="search_key" placeholder="What can we help you to find ?" class="input" type="text">
-                        <button class="submit_btn">
-                            <img src="./assets/images/icons/search.svg" alt="">
-                        </button>
-                    </div>
-                    
-                    <div class="icon_part">
-                        <div onclick="event.preventDefault(); search_modal.classList.toggle('active')" class="close">
-                            <img src="./assets/images/icons/close/close.png" alt="">
+    <section id="search_modal">
+        <div class="search_overly">
+            <div class="search_card" x-data="{search_key: ``}">
+                <div class="top">
+                    <form class="search_form" action="">
+                        <div class="search_input">
+                            <input x-model="search_key" placeholder="What can we help you to find ?" class="input"
+                                type="text">
+                            <button class="submit_btn">
+                                <img src="./assets/images/icons/search.svg" alt="">
+                            </button>
                         </div>
-                    </div>
-                    
-                </form>
-                <span x-text=""></span>
-            </div>
-            <div class="bottom" >
-                
-                    <div x-show="search_key.length == 0"  class="suggested_keywords">
+
+                        <div class="icon_part">
+                            <div onclick="event.preventDefault(); search_modal.classList.toggle('active')"
+                                class="close">
+                                <img src="./assets/images/icons/close/close.png" alt="">
+                            </div>
+                        </div>
+
+                    </form>
+                    <span x-text=""></span>
+                </div>
+                <div class="bottom">
+
+                    <div x-show="search_key.length == 0" class="suggested_keywords">
                         <div class="keyword_group">
                             <h3 class="heading">The Most Searched Items</h3>
                             <ul class="link_list" x-data="{search_keywords}">
@@ -539,8 +624,8 @@
                             </ul>
                         </div>
                     </div>
-                    
-                    <div x-show="search_key.length>0"  class="suggested_result">
+
+                    <div x-show="search_key.length>0" class="suggested_result">
                         <div class="left">
                             <h4 class="search_at_a_glance">view 17 out of 30 results</h4>
                             <div class="result_list">
@@ -548,12 +633,12 @@
                                     <template x-for="i in 10">
                                         <li>
                                             <a href="#">
-                                                <span x-text="i"></span> 
-                                                iphone 
+                                                <span x-text="i"></span>
+                                                iphone
                                                 <span class="search_match" x-text="search_key">case</span>
                                             </a>
                                         </li>
-                                    </template>  
+                                    </template>
                                 </ul>
                             </div>
                         </div>
@@ -566,13 +651,13 @@
                                         </div>
                                         <a href="#">
                                             <h4 class="product_title">Watch & Earpods</h4>
-                                        </a>  
+                                        </a>
                                     </div>
                                     <div class="nav_product">
                                         <img src="/assets/images/products/p2.png" alt="">
                                         <a href="#">
                                             <h4 class="product_title">Holder</h4>
-                                        </a>  
+                                        </a>
                                     </div>
                                     <!-- <div class="nav_product">
                                         <img src="/assets/images/products/p3.png" alt="">
@@ -584,107 +669,590 @@
                                         <img src="/assets/images/products/p4.png" alt="">
                                         <a href="#">
                                             <h4 class="product_title">Cases</h4>
-                                        </a>  
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="banner">
-    <div class="container">
-        <div class="banner_content">
-            <div class="left">
-                <h1 class="heading">
-                    Tech Heim
-                </h1>
-                <h2 class="sub_heading" >
-                    "Join the <span>digital revolution</span> "
-                </h2>
-                <a class="btn banner_btn btn_v1" href="#">Explore More</a>
-            </div>
-
-            <div class="right">
-                <div class="img">
-                    <img src="./assets/images/banner/1.png" alt="">
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section>
-    <div class="container">
-        <div x-data="" class="top_categories">
-            <template  x-for="i in 3" x-key="i">
-                <div  class="item" >
-                    <div class="img">
-                        <img src="./assets/images/products/p5.png" alt="">
+    <section id="banner">
+        <div class="container">
+            <div class="banner_content">
+                <div class="left">
+                    <h1 class="heading">
+                        Tech Heim
+                    </h1>
+                    <h2 class="sub_heading">
+                        "Join the <span>digital revolution</span> "
+                    </h2>
+                    <a class="btn banner_btn btn_v1" href="#">Explore More</a>
+                </div>
+
+                <div class="right">
+                        <div class="img">
+                            <img src="./assets/images/banner/1.png" alt="">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div x-data="" class="top_categories">
+                <template x-for="i in 3" x-key="i">
+                    <div class="item">
+                        <div class="img">
+                            <img src="./assets/images/products/p5.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h3>Accessories</h3>
+                        </div>
                     </div>
-                    <div class="title">
-                        <h3>Accessories</h3>
-                    </div>
-                </div>
-            </template>
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="top_sales_part">
-            <div class="left">
-                <h2 class="heading">Products On Sale</h2>
-                <h3 class="sub_heading">Shop Now!</h3>
-                <div>
-                    <a class="link" href="#">
-                        <span>View all</span>
-                       <img src="./assets/images/icons/angel_right/arrow-right.png" alt=""></a>
-                </div>
-                
+                </template>
             </div>
-            <div class="right">
-                <div x-data="" class="product_list">
-                    <template x-for="i in 2" x-key="i">
-                        <div class="product_item product_v1">
-                            <div class="discount">
-                                50%
-                            </div>
-                            <div class="img">
-                                <img src="./assets/images/products/p6.png" alt="mouse">
-                            </div>
-                            <div class="title">
-                                <h2>Logitech G502 Gaming Mouse</h2>
-                            </div>
-                            <div class="price_area">
-                                <div class="del_price">
-                                    <del>
-                                        $30
-                                    </del>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="top_sales_part">
+                <div class="left">
+                    <h2 class="heading">Products On Sale</h2>
+                    <h3 class="sub_heading">Shop Now!</h3>
+                    <div>
+                        <a class="link" href="#">
+                            <span>View all</span>
+                            <img src="./assets/images/icons/angel_right/arrow-right.png" alt=""></a>
+                    </div>
+
+                </div>
+                <div class="right">
+                    <div x-data="" class="product_list">
+                        <template x-for="i in 2" x-key="i">
+                            <div class="product_item product_v1">
+                                <div class="discount">
+                                    50%
                                 </div>
-                                <div class="price">
-                                    $19
+                                <div class="img">
+                                    <img src="./assets/images/products/p6.png" alt="mouse">
+                                </div>
+                                <div class="title">
+                                    <h2>Logitech G502 Gaming Mouse</h2>
+                                </div>
+                                <div class="price_area">
+                                    <div class="del_price">
+                                        <del>
+                                            $30
+                                        </del>
+                                    </div>
+                                    <div class="price">
+                                        $19
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="navigation">
+                        <div class="left">
+                            <img src="./assets/images/icons/left-right_arrow/arrow.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="product_list">
+                <div class="section_heading">
+                    <h2>New Products</h2>
+                    
+                    
+
+                    <div class="right_side">
+                        <a href="#">
+                            View All
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+                <hr style="width: 1180px;">
+                <div class="product_list product_list_2">
+                    <div class="product_item product_item_2">
+                        <div class="top">
+                            <div class="img">
+                                <img src="./assets/images/products/p1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            
+                                <img src="./assets/images/icons/line/line.png" alt="">
+                            
+                            <div class="title">
+                                
+                                <a href="#">
+                                    
+                                    <h3> Iphone 14 promax 256 gig </h3>
+                                </a>
+                                
+                            </div>
+                            <div class="price">
+                                <div class="left">
+                                    <del>
+                                        1200$
+                                    </del>
+                                    <b>1150$</b>
+                                </div>
+                                <div class="right">
+                                    <i class="fa fa-star"></i>
+                                    <span class="rating">4.9</span>
                                 </div>
                             </div>
                         </div>
-                    </template>
-                </div>
-                <div class="navigation">
-                    <div class="left">
-                        <img src="./assets/images/icons/left-right_arrow/arrow.png" alt="">
+                    </div>
+                    <div class="product_item product_item_2">
+                        <div class="top">
+                            <div class="img">
+                                <img src="./assets/images/products/p1.png" alt="">
+                            </div>
+                        <a href="" class="favorite">
+                            <img src="./assets/images/icons/heart/heart.png" alt="">
+                        </a>
+                        <ul class="color_list">
+                            <li style="background-color: #51504C;"></li>
+                            <li style="background-color: #e9e9a3;"></li>
+                            <li style="background-color: #96B9D7;"></li>
+                        </ul>
+                        <a href="#">
+
+                        </a>
+                    </div>
+
+                        <div class="bottom">
+                                <img src="./assets/images/icons/line/line.png" alt="">
+                            <div class="title">
+                                <a href="#">
+                                    <h3> Iphone 14 promax 256 gig </h3>
+                                </a>
+                            </div>
+                            <div class="price">
+                                <div class="left">
+                                    <del>
+                                        1200$
+                                    </del>
+                                    <b>1150$</b>
+                                </div>
+                                <div class="right">
+                                    <i class="fa fa-star"></i>
+                                    <span class="rating">4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product_item product_item_2">
+                        <div class="top">
+                            <div class="img">
+                                <img src="./assets/images/products/p1.png" alt="">
+                            </div>
+                        <a href="" class="favorite">
+                            <img src="./assets/images/icons/heart/heart.png" alt="">
+                        </a>
+                        <ul class="color_list">
+                            <li style="background-color: #51504C;"></li>
+                            <li style="background-color: #e9e9a3;"></li>
+                            <li style="background-color: #96B9D7;"></li>
+                        </ul>
+                        <a href="#">
+                            
+                        </a>
+                    </div>
+
+                        <div class="bottom">
+                                <img src="./assets/images/icons/line/line.png" alt="">
+                            <div class="title">
+                                <a href="#">
+                                    <h3> Iphone 14 promax 256 gig </h3>
+                                </a>
+                            </div>
+                            <div class="price">
+                                <div class="left">
+                                    <del>
+                                        1200$
+                                    </del>
+                                    <b>1150$</b>
+                                </div>
+                                <div class="right">
+                                    <i class="fa fa-star"></i>
+                                    <span class="rating">4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product_item product_item_2">
+                        <div class="top">
+                            <div class="img">
+                                <img src="./assets/images/products/p1.png" alt="">
+                            </div>
+                        <a href="" class="favorite">
+                            <img src="./assets/images/icons/heart/heart.png" alt="">
+                        </a>
+                        <ul class="color_list">
+                            <li style="background-color: #51504C;"></li>
+                            <li style="background-color: #e9e9a3;"></li>
+                            <li style="background-color: #96B9D7;"></li>
+                        </ul>
+                        <a href="#">
+                            
+                        </a>
+                    </div>
+
+                        <div class="bottom">
+                                <img src="./assets/images/icons/line/line.png" alt="">
+                            <div class="title">
+                                <a href="#">
+                                    <h3> Iphone 14 promax 256 gig </h3>
+                                </a>
+                            </div>
+                            <div class="price">
+                                <div class="left">
+                                    <del>
+                                        1200$
+                                    </del>
+                                    <b>1150$</b>
+                                </div>
+                                <div class="right">
+                                    <i class="fa fa-star"></i>
+                                    <span class="rating">4.9</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section id="offers">
+        <div class="container">
+            <div class="offer_contents">
+                <div class="left">
+                    <div class="left_content">
+                        <!-- <div class="img">
+                            <img src="./assets/offer/left_bg.png" alt="">
+                        </div> -->
+                        <div class="content_left">
+                            <h2 class="offer_title"> <span>Iphone</span> 15 Series</h2>
+                            <div class="product_image">
+                                <img src="./assets/offer/product.png" alt="">
+                            </div>
+                        </div>
+                        <div class="content_right">
+                            <ul>
+                                <li>
+                                    <div class="amount">8</div>
+                                    <div class="title">Days</div>
+                                </li>
+                                <li>
+                                    <div class="amount">20</div>
+                                    <div class="title">Hours</div>
+                                </li>
+                                <li>
+                                    <div class="amount">40</div>
+                                    <div class="title">minutes</div>
+                                </li>
+                                <li>
+                                    <div class="amount">8</div>
+                                    <div class="title">Seconds</div>
+                                </li>
+                            </ul>
+                            <strong class="offer_details_title" style="font-size: 15px; padding:5px">It feels good to be the first</strong>
+                            <p class="description" style="padding: 10px 0px;">
+                                Get ready for the future of smartphones.Experience innovation like never before. Stay tuned for the big iPhone 15 pre-sale.
+                            </p>
+                            <div style="padding: 30px 0px 30px 70px;">
+                                <a class="btn offer_btn btn_v1" href="#">Register Now</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                 <div class="right_content">
+                    <!-- <div class="img">
+                        <img src="./assets/offer/right_bg.png" alt="">
+                        <a class="btn offer_btn btn_v1" href="#">Buy Now</a>
+                    </div> -->
+
+                    <div class="background-container">
+                        <a class="btn offer_btn btn_v1">Click Me</a>
+                    </div>
+                    
+                 </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="product_list">
+                <div class="section_heading">
+                    <h2>Best Sellers</h2>
+                    
+                    <div class="right_side">
+                        <a href="#">
+                            View All
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <hr style="width: 1180px;">
+                <div class="product_list product_list_2">
+                    <div class="product_item product_item_2">
+                        <div class="top">
+                            <div class="img">
+                                <img src="./assets/images/products/p8.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            
+                                <img src="./assets/images/icons/line/line.png" alt="">
+                            
+                            <div class="title">
+                                
+                                <a href="#">
+                                    
+                                    <h3> EchoX Pro H900 </h3>
+                                </a>
+                                
+                            </div>
+                            <div class="price">
+                                <div class="left">
+                                    <del>
+                                        1200$
+                                    </del>
+                                    <b>1150$</b>
+                                </div>
+                                <div class="right">
+                                    <i class="fa fa-star"></i>
+                                    <span class="rating">4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_item product_item_2">
+                        <div class="top">
+                            <div class="img">
+                                <img src="./assets/images/products/p8.png" alt="">
+                            </div>
+                        <a href="" class="favorite">
+                            <img src="./assets/images/icons/heart/heart.png" alt="">
+                        </a>
+                        <ul class="color_list">
+                            <li style="background-color: #51504C;"></li>
+                            <li style="background-color: #e9e9a3;"></li>
+                            <li style="background-color: #96B9D7;"></li>
+                        </ul>
+                        <a href="#">
+
+                        </a>
+                    </div>
+
+                        <div class="bottom">
+                                <img src="./assets/images/icons/line/line.png" alt="">
+                            <div class="title">
+                                <a href="#">
+                                    <h3> EchoX Pro H900 </h3>
+                                </a>
+                            </div>
+                            <div class="price">
+                                <div class="left">
+                                    <del>
+                                        1200$
+                                    </del>
+                                    <b>1150$</b>
+                                </div>
+                                <div class="right">
+                                    <i class="fa fa-star"></i>
+                                    <span class="rating">4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product_item product_item_2">
+                        <div class="top">
+                            <div class="img">
+                                <img src="./assets/images/products/p8.png" alt="">
+                            </div>
+                        <a href="" class="favorite">
+                            <img src="./assets/images/icons/heart/heart.png" alt="">
+                        </a>
+                        <ul class="color_list">
+                            <li style="background-color: #51504C;"></li>
+                            <li style="background-color: #e9e9a3;"></li>
+                            <li style="background-color: #96B9D7;"></li>
+                        </ul>
+                        <a href="#">
+                            
+                        </a>
+                    </div>
+
+                        <div class="bottom">
+                                <img src="./assets/images/icons/line/line.png" alt="">
+                            <div class="title">
+                                <a href="#">
+                                    <h3> EchoX Pro H900 </h3>
+                                </a>
+                            </div>
+                            <div class="price">
+                                <div class="left">
+                                    <del>
+                                        1200$
+                                    </del>
+                                    <b>1150$</b>
+                                </div>
+                                <div class="right">
+                                    <i class="fa fa-star"></i>
+                                    <span class="rating">4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product_item product_item_2">
+                        <div class="top">
+                            <div class="img">
+                                <img src="./assets/images/products/p8.png" alt="">
+                            </div>
+                        <a href="" class="favorite">
+                            <img src="./assets/images/icons/heart/heart.png" alt="">
+                        </a>
+                        <ul class="color_list">
+                            <li style="background-color: #51504C;"></li>
+                            <li style="background-color: #e9e9a3;"></li>
+                            <li style="background-color: #96B9D7;"></li>
+                        </ul>
+                        <a href="#">
+                            
+                        </a>
+                    </div>
+
+                        <div class="bottom">
+                                <img src="./assets/images/icons/line/line.png" alt="">
+                            <div class="title">
+                                <a href="#">
+                                    <h3> EchoX Pro H900 </h3>
+                                </a>
+                            </div>
+                            <div class="price">
+                                <div class="left">
+                                    <del>
+                                        1200$
+                                    </del>
+                                    <b>1150$</b>
+                                </div>
+                                <div class="right">
+                                    <i class="fa fa-star"></i>
+                                    <span class="rating">4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="product_list">
+                <div class="section_heading">
+                    <h2>Top Brands</h2>
+                    <div class="right_side">
+                        <a href="#">
+                            View All
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <hr style="width: 1180px;">
+
+
+
+                <div class="brands_images" style="padding-bottom: 50px;" >
+                    <img style="padding-right: 40px;" src="/assets/images/topbrands/apple.png" alt="">
+                    <img style="padding-right: 40px;" style="padding-right: 20px;" src="/assets/images/topbrands/sony.png" alt="">
+                    <img style="padding-right: 40px;" src="/assets/images/topbrands/samsung.png" alt="">
+                    <img style="padding-right: 40px;" src="/assets/images/topbrands/canon.png" alt="">
+                    <img style="padding-right: 40px;" src="/assets/images/topbrands/huawei.png" alt="">
+                    <img style="padding-left: 65px;" src="/assets/images/topbrands/lenevo.png" alt="">
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+
+<section>
+    <div class="container">
+        <div class="highlited_brand">
+            <div class="left">
+                <h1 class="watch_title">SMART WATCH</h1>
+                <p class="watch_description">Various designs and brands</p>
+                <a class="btn offer_btn btn_v1" href="#">view</a>
+            </div>
+            <div class="right">
+                <div class="img">
+                    <img src="/assets/images/smart_watch/watch.png" alt="">
+                </div>
+            </div>
+        </div>
+        
     </div>
 </section>
 
-<script src="./js/plugins/alpine.js"></script>
-<script src="./js/app.js"></script>
+
+<section>
+    <div class="container">
+        <div class="product_list">
+            <div class="section_heading">
+                <h2>Our Blogs</h2>
+                <div class="right_side">
+                    <a href="#">
+                        View All
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+            <hr style="width: 1180px;">
+
+  <div class="blog_content">
+    <div class="blog_right"></div>
+    <div class="blog_left"></div>
+  </div>          
+
+            
+        </div>
+    </div>
+</section>
+   
+
+    <script src="./js/plugins/alpine.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
