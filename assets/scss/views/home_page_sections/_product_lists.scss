@@ -3,20 +3,32 @@
     grid-template-columns: repeat(auto-fit, minmax(255px, 255px));
     gap:50px;
     padding: 48px 0px;
+    
+    @include xs{
+        // grid-template-columns: 1fr;
+        // display: inline-block;
+    }
+    
     .product_item_2{
         max-width: 255px;
         box-shadow: -2px 2px 15px -1px rgb(173, 168, 168);
         padding: 16px;
         display: grid;
+
+        @include xs{
+            grid-template-columns: 1fr;
+            display: block;
+        }
+        
         .top{
             position: relative;
             overflow: hidden;
-            text-align: center;
+            // text-align: center;
              .img{
                 img{
                     
                     transition-duration: .3s;
-                    
+                    width: 80%;
                 }
              }
             .favorite{
@@ -74,19 +86,19 @@
             }
 
         }
-        &:hober{
-            .top{
-                .img{
-                    img{
-                        transform:scale(1.2);
-                    }
-                }
-                a{
-                    img{
+        // &:hober{
+        //     .top{
+        //         .img{
+        //             img{
+        //                 transform:scale(1.2);
+        //             }
+        //         }
+        //         a{
+        //             img{
 
-                    }
-                }
-            }
-        }
+        //             }
+        //         }
+        //     }
+        // }
     }
 }

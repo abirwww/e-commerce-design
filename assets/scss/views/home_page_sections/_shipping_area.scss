@@ -3,13 +3,18 @@
     .shipping_content{
         display: flex;
         justify-content: space-between;
+        @include xs {
+            display: inline-block;
+              }
         .contents{
             display: flex;
             align-items: center;
             gap: 10px;
+           
         }
         .tech_content{
 
         }
     }
 }
+

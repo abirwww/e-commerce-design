@@ -1,18 +1,36 @@
-#banner{}
+// #banner{}
 .banner_content{
     display: grid;
     grid-template-columns: 500px 1fr;
+
+    @include xs{
+        display: block;
+    }
+
     .left{
         .heading{
             font-size: 64px;
             color: var(--navy-blue);
             margin-top: 56px;
+
+            @include xs{
+            font-size: 42px;
+
+            }
+
         }
         .sub_heading{
             font-size: 32px;
             color: var(--navy-blue);
             margin-top: 50px;
             margin-bottom: 110px;
+
+            @include xs{
+                margin: 0;
+                margin-bottom: 10px;
+                font-size: 20px;
+            }
+
             span{
                 color: var(--secondary);
             }
@@ -22,12 +40,19 @@
             padding: 19px 95px;
         }
         a{
-
+           .btn{
+            background-color: var(--secondary) !important;
+           } 
         }
     }
     .right{
         img{
 
+            @include xs{
+                margin-top: 20px;
+                width: 100%;
+            }
+            
         }
     }
 }

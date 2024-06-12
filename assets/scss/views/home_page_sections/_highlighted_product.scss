@@ -6,12 +6,24 @@
         grid-template-columns: 1fr 1fr;
         padding: 0px;
         align-items: center;
+        @include xs{
+            display: block;
+            background-size: cover;     
+            background-position: center; 
+            background-repeat: no-repeat; 
+            height: 72vh; 
+            padding-bottom: 20px;
+            text-align: center;
+        }
         .left{
             text-align: center;
             .watch_title{
                 font-size: 45px;
                 color: white;
                 line-height: 70px;
+                @include xs{
+                    font-size: 35px;
+                }
             }
             .watch_description{
                 color: white;
@@ -24,6 +36,10 @@
                 img{
                     padding: 50px;
                     padding-right: 100px;
+                    @include xs{
+                       width: 250px;
+                       padding: 18px;
+                    }
                 }
             }
         }

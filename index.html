@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +14,11 @@
     <!-- <link rel="stylesheet" href="./assets/fonts/google_icons.css">-->
     <link rel="stylesheet" href="assets/styles/app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="./js/plugins/alpine.js" defer></script>
-    <script src="./js/app.js" defer></script>
 
 </head>
+
 <body>
-    <header>
+    <header id="header">
         <nav class="container">
             <div class="nav_body">
                 <div class="logo">
@@ -224,8 +224,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
-
                                             </div>
                                         </div>
                                     </div>
@@ -264,9 +262,6 @@
                                                 <p>smith1996@gmail.com</p>
                                             </div>
                                         </a>
-
-
-
                                         <a href="">
                                             <div class="icon">
                                                 <img src="./assets/images/icons/profile_icons/profile_icon_2.png"
@@ -276,9 +271,6 @@
                                                 <h4>Orders</h4>
                                             </div>
                                         </a>
-
-
-
                                         <a href="">
                                             <div class="icon">
                                                 <img src="./assets/images/icons/profile_icons/profile_icon_3.png"
@@ -288,9 +280,6 @@
                                                 <h4>Wish List</h4>
                                             </div>
                                         </a>
-
-
-
                                         <a href="">
                                             <div class="icon">
                                                 <img src="./assets/images/icons/profile_icons/profile_icon_4.png"
@@ -300,9 +289,6 @@
                                                 <h4>Payments</h4>
                                             </div>
                                         </a>
-
-
-
                                         <a href="">
                                             <div class="icon">
                                                 <img src="./assets/images/icons/profile_icons/profile_icon_5.png"
@@ -680,6 +666,7 @@
             </div>
         </div>
     </section>
+    
 
     <section id="banner">
         <div class="container">
@@ -695,24 +682,33 @@
                 </div>
 
                 <div class="right">
-                        <div class="img">
-                            <img src="./assets/images/banner/1.png" alt="">
-                        </div>
+                    <div class="img">
+                        <img src="./assets/images/banner/1.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <section id="top_categories">
         <div class="container">
-            <div x-data="" class="top_categories">
-                <template x-for="i in 3" x-key="i">
+            <div x-data="{ products: [
+                                        ['./assets/images/products/pd1.png','Accessories'],
+                                        [ './assets/images/products/pd2.png','Camera'], 
+                                        ['./assets/images/products/pd3.png','Laptop'], 
+                                        ['./assets/images/products/pd4.png','Smart Phone'],
+                                        [ './assets/images/products/pd5.png','Gaming'], 
+                                        ['./assets/images/products/pd6.png','Smart Watch']
+                                    ] 
+                        }"
+                class="top_categories">
+                <template x-for="(product, index) in products" :key="index">
                     <div class="item">
                         <div class="img">
-                            <img src="./assets/images/products/p5.png" alt="">
+                            <img :src="product[0]" alt="Product Image">
                         </div>
                         <div class="title">
-                            <h3>Accessories</h3>
+                            <h3 x-text="product[1]"> </h3>
                         </div>
                     </div>
                 </template>
@@ -720,7 +716,7 @@
         </div>
     </section>
 
-    <section>
+<section id="top_sales_part">
         <div class="container">
             <div class="top_sales_part">
                 <div class="left">
@@ -734,8 +730,14 @@
 
                 </div>
                 <div class="right">
-                    <div x-data="" class="product_list">
-                        <template x-for="i in 2" x-key="i">
+                    <div x-data="{ products: [
+                                        ['./assets/images/products/ps1.png','Logitech G502 Gaming Mouse'],
+                                        [ './assets/images/products/ps2.png','NPET Wired Gaming Keyboard'], 
+                                        ['./assets/images/products/ps3.png','Apple Watch Series Apples'], 
+                                        ['./assets/images/products/ps4.png','Apple 2022 MacBook Air pads'],
+                                    ] 
+                        }" class="product_list">
+                        <!-- <template x-for="i in 4" x-key="i">
                             <div class="product_item product_v1">
                                 <div class="discount">
                                     50%
@@ -757,7 +759,32 @@
                                     </div>
                                 </div>
                             </div>
+                        </template> -->
+
+                        <template x-for="(product, index) in products" :key="index">
+                            <div class="product_item product_v1">
+                                <div class="discount">
+                                    50%
+                                </div>
+                                <div class="img">
+                                    <img :src="product[0]" alt="Product Image">
+                                </div>
+                                <div>
+                                    <h3 class="title"  x-text="product[1]"> </h3>
+                                </div>
+                                <div class="price_area">
+                                    <div class="del_price">
+                                        <del>
+                                            $30
+                                        </del>
+                                    </div>
+                                    <div class="price">
+                                        $19
+                                    </div>
+                                </div>
+                            </div>
                         </template>
+
                     </div>
                     <div class="navigation">
                         <div class="left">
@@ -767,43 +794,54 @@
                 </div>
             </div>
         </div>
-    </section>
+</section>
 
-    <section>
+    <!-- <section>
+        <div class="container">
+            <div x-data="" class="top_categories">
+                <template x-for="i in 3" x-key="i">
+                    <div class="item">
+                        <div class="img">
+                            <img src="./assets/images/products/p5.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h3>Accessories</h3>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="new_product_list">
         <div class="container">
             <div class="product_list">
                 <div class="section_heading">
                     <h2>New Products</h2>
-                    
-                    
-
                     <div class="right_side">
                         <a href="#">
                             View All
                             <i class="fa fa-angle-right"></i>
                         </a>
                     </div>
-                    
                 </div>
                 <hr style="width: 1180px;">
                 <div class="product_list product_list_2">
                     <div class="product_item product_item_2">
                         <div class="top">
                             <div class="img">
-                                <img src="./assets/images/products/p1.png" alt="">
+                                <img src="./assets/images/products/npd1.png" alt="">
                             </div>
                         </div>
                         <div class="bottom">
-                            
-                                <img src="./assets/images/icons/line/line.png" alt="">
-                            
+                            <img src="./assets/images/icons/line/line.png" alt="">
+
                             <div class="title">
-                                
+
                                 <a href="#">
-                                    
+
                                     <h3> Iphone 14 promax 256 gig </h3>
                                 </a>
-                                
                             </div>
                             <div class="price">
                                 <div class="left">
@@ -822,26 +860,25 @@
                     <div class="product_item product_item_2">
                         <div class="top">
                             <div class="img">
-                                <img src="./assets/images/products/p1.png" alt="">
+                                <img src="./assets/images/products/npd2.png" alt="">
                             </div>
-                        <a href="" class="favorite">
-                            <img src="./assets/images/icons/heart/heart.png" alt="">
-                        </a>
-                        <ul class="color_list">
-                            <li style="background-color: #51504C;"></li>
-                            <li style="background-color: #e9e9a3;"></li>
-                            <li style="background-color: #96B9D7;"></li>
-                        </ul>
-                        <a href="#">
-
-                        </a>
-                    </div>
+                            <a href="" class="favorite">
+                                <img src="./assets/images/icons/heart/heart.png" alt="">
+                            </a>
+                            <ul class="color_list">
+                                <li style="background-color: #51504C;"></li>
+                                <li style="background-color: #e9e9a3;"></li>
+                                <li style="background-color: #96B9D7;"></li>
+                            </ul>
+                            <a href="#">
+                            </a>
+                        </div>
 
                         <div class="bottom">
-                                <img src="./assets/images/icons/line/line.png" alt="">
+                            <img src="./assets/images/icons/line/line.png" alt="">
                             <div class="title">
                                 <a href="#">
-                                    <h3> Iphone 14 promax 256 gig </h3>
+                                    <h3> Blackmagic Design Pocket</h3>
                                 </a>
                             </div>
                             <div class="price">
@@ -862,26 +899,26 @@
                     <div class="product_item product_item_2">
                         <div class="top">
                             <div class="img">
-                                <img src="./assets/images/products/p1.png" alt="">
+                                <img src="./assets/images/products/npd3.png" alt="">
                             </div>
-                        <a href="" class="favorite">
-                            <img src="./assets/images/icons/heart/heart.png" alt="">
-                        </a>
-                        <ul class="color_list">
-                            <li style="background-color: #51504C;"></li>
-                            <li style="background-color: #e9e9a3;"></li>
-                            <li style="background-color: #96B9D7;"></li>
-                        </ul>
-                        <a href="#">
-                            
-                        </a>
-                    </div>
+                            <a href="" class="favorite">
+                                <img src="./assets/images/icons/heart/heart.png" alt="">
+                            </a>
+                            <ul class="color_list">
+                                <li style="background-color: #51504C;"></li>
+                                <li style="background-color: #e9e9a3;"></li>
+                                <li style="background-color: #96B9D7;"></li>
+                            </ul>
+                            <a href="#">
+
+                            </a>
+                        </div>
 
                         <div class="bottom">
-                                <img src="./assets/images/icons/line/line.png" alt="">
+                            <img src="./assets/images/icons/line/line.png" alt="">
                             <div class="title">
                                 <a href="#">
-                                    <h3> Iphone 14 promax 256 gig </h3>
+                                    <h3> SAMSUNG Galaxy S23 Ultra </h3>
                                 </a>
                             </div>
                             <div class="price">
@@ -902,26 +939,26 @@
                     <div class="product_item product_item_2">
                         <div class="top">
                             <div class="img">
-                                <img src="./assets/images/products/p1.png" alt="">
+                                <img src="./assets/images/products/npd4n.png" alt="">
                             </div>
-                        <a href="" class="favorite">
-                            <img src="./assets/images/icons/heart/heart.png" alt="">
-                        </a>
-                        <ul class="color_list">
-                            <li style="background-color: #51504C;"></li>
-                            <li style="background-color: #e9e9a3;"></li>
-                            <li style="background-color: #96B9D7;"></li>
-                        </ul>
-                        <a href="#">
-                            
-                        </a>
-                    </div>
+                            <a href="" class="favorite">
+                                <img src="./assets/images/icons/heart/heart.png" alt="">
+                            </a>
+                            <ul class="color_list">
+                                <li style="background-color: #51504C;"></li>
+                                <li style="background-color: #e9e9a3;"></li>
+                                <li style="background-color: #96B9D7;"></li>
+                            </ul>
+                            <a href="#">
+
+                            </a>
+                        </div>
 
                         <div class="bottom">
-                                <img src="./assets/images/icons/line/line.png" alt="">
+                            <img src="./assets/images/icons/line/line.png" alt="">
                             <div class="title">
                                 <a href="#">
-                                    <h3> Iphone 14 promax 256 gig </h3>
+                                    <h3> VR VisionTech X1 </h3>
                                 </a>
                             </div>
                             <div class="price">
@@ -976,40 +1013,42 @@
                                     <div class="title">Seconds</div>
                                 </li>
                             </ul>
-                            <strong class="offer_details_title" style="font-size: 15px; padding:5px">It feels good to be the first</strong>
+                            <strong class="offer_details_title" style="font-size: 15px; padding:5px">It feels good to be
+                                the first</strong>
                             <p class="description" style="padding: 10px 0px;">
-                                Get ready for the future of smartphones.Experience innovation like never before. Stay tuned for the big iPhone 15 pre-sale.
+                                Get ready for the future of smartphones.Experience innovation like never before. Stay
+                                tuned for the big iPhone 15 pre-sale.
                             </p>
                             <div style="padding: 30px 0px 30px 70px;">
                                 <a class="btn offer_btn btn_v1" href="#">Register Now</a>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
                 <div class="right">
-                 <div class="right_content">
-                    <!-- <div class="img">
+                    <div class="right_content">
+                        <!-- <div class="img">
                         <img src="./assets/offer/right_bg.png" alt="">
                         <a class="btn offer_btn btn_v1" href="#">Buy Now</a>
                     </div> -->
 
-                    <div class="background-container">
-                        <a class="btn offer_btn btn_v1">Click Me</a>
+                        <div class="background-container">
+                            <a class="btn offer_btn btn_v1">Click Me</a>
+                        </div>
+
                     </div>
-                    
-                 </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <section id="best_product_list">
         <div class="container">
             <div class="product_list">
                 <div class="section_heading">
                     <h2>Best Sellers</h2>
-                    
+
                     <div class="right_side">
                         <a href="#">
                             View All
@@ -1017,26 +1056,24 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <hr style="width: 1180px;">
                 <div class="product_list product_list_2">
                     <div class="product_item product_item_2">
                         <div class="top">
                             <div class="img">
-                                <img src="./assets/images/products/p8.png" alt="">
+                                <img src="./assets/images/products/bs1.png" alt="">
                             </div>
                         </div>
                         <div class="bottom">
-                            
-                                <img src="./assets/images/icons/line/line.png" alt="">
-                            
+
+                            <img src="./assets/images/icons/line/line.png" alt="">
+
                             <div class="title">
-                                
                                 <a href="#">
-                                    
                                     <h3> EchoX Pro H900 </h3>
                                 </a>
-                                
+
                             </div>
                             <div class="price">
                                 <div class="left">
@@ -1055,23 +1092,23 @@
                     <div class="product_item product_item_2">
                         <div class="top">
                             <div class="img">
-                                <img src="./assets/images/products/p8.png" alt="">
+                                <img src="./assets/images/products/bs2.png" alt="">
                             </div>
-                        <a href="" class="favorite">
-                            <img src="./assets/images/icons/heart/heart.png" alt="">
-                        </a>
-                        <ul class="color_list">
-                            <li style="background-color: #51504C;"></li>
-                            <li style="background-color: #e9e9a3;"></li>
-                            <li style="background-color: #96B9D7;"></li>
-                        </ul>
-                        <a href="#">
+                            <a href="" class="favorite">
+                                <img src="./assets/images/icons/heart/heart.png" alt="">
+                            </a>
+                            <ul class="color_list">
+                                <li style="background-color: #51504C;"></li>
+                                <li style="background-color: #e9e9a3;"></li>
+                                <li style="background-color: #96B9D7;"></li>
+                            </ul>
+                            <a href="#">
 
-                        </a>
-                    </div>
+                            </a>
+                        </div>
 
                         <div class="bottom">
-                                <img src="./assets/images/icons/line/line.png" alt="">
+                            <img src="./assets/images/icons/line/line.png" alt="">
                             <div class="title">
                                 <a href="#">
                                     <h3> EchoX Pro H900 </h3>
@@ -1095,23 +1132,23 @@
                     <div class="product_item product_item_2">
                         <div class="top">
                             <div class="img">
-                                <img src="./assets/images/products/p8.png" alt="">
+                                <img src="./assets/images/products/bs3.png" alt="">
                             </div>
-                        <a href="" class="favorite">
-                            <img src="./assets/images/icons/heart/heart.png" alt="">
-                        </a>
-                        <ul class="color_list">
-                            <li style="background-color: #51504C;"></li>
-                            <li style="background-color: #e9e9a3;"></li>
-                            <li style="background-color: #96B9D7;"></li>
-                        </ul>
-                        <a href="#">
-                            
-                        </a>
-                    </div>
+                            <a href="" class="favorite">
+                                <img src="./assets/images/icons/heart/heart.png" alt="">
+                            </a>
+                            <ul class="color_list">
+                                <li style="background-color: #51504C;"></li>
+                                <li style="background-color: #e9e9a3;"></li>
+                                <li style="background-color: #96B9D7;"></li>
+                            </ul>
+                            <a href="#">
+
+                            </a>
+                        </div>
 
                         <div class="bottom">
-                                <img src="./assets/images/icons/line/line.png" alt="">
+                            <img src="./assets/images/icons/line/line.png" alt="">
                             <div class="title">
                                 <a href="#">
                                     <h3> EchoX Pro H900 </h3>
@@ -1135,23 +1172,23 @@
                     <div class="product_item product_item_2">
                         <div class="top">
                             <div class="img">
-                                <img src="./assets/images/products/p8.png" alt="">
+                                <img src="./assets/images/products/bs4.png" alt="">
                             </div>
-                        <a href="" class="favorite">
-                            <img src="./assets/images/icons/heart/heart.png" alt="">
-                        </a>
-                        <ul class="color_list">
-                            <li style="background-color: #51504C;"></li>
-                            <li style="background-color: #e9e9a3;"></li>
-                            <li style="background-color: #96B9D7;"></li>
-                        </ul>
-                        <a href="#">
-                            
-                        </a>
-                    </div>
+                            <a href="" class="favorite">
+                                <img src="./assets/images/icons/heart/heart.png" alt="">
+                            </a>
+                            <ul class="color_list">
+                                <li style="background-color: #51504C;"></li>
+                                <li style="background-color: #e9e9a3;"></li>
+                                <li style="background-color: #96B9D7;"></li>
+                            </ul>
+                            <a href="#">
+
+                            </a>
+                        </div>
 
                         <div class="bottom">
-                                <img src="./assets/images/icons/line/line.png" alt="">
+                            <img src="./assets/images/icons/line/line.png" alt="">
                             <div class="title">
                                 <a href="#">
                                     <h3> EchoX Pro H900 </h3>
@@ -1176,7 +1213,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="top_product_list">
         <div class="container">
             <div class="product_list">
                 <div class="section_heading">
@@ -1188,262 +1225,259 @@
                         </a>
                     </div>
                 </div>
-                
                 <hr style="width: 1180px;">
-
-
-
-                <div class="brands_images" style="padding-bottom: 50px;" >
+                <div class="brands_images" style="padding-bottom: 50px;">
                     <img style="padding-right: 40px;" src="/assets/images/topbrands/apple.png" alt="">
-                    <img style="padding-right: 40px;" style="padding-right: 20px;" src="/assets/images/topbrands/sony.png" alt="">
+                    <img style="padding-right: 40px;" style="padding-right: 20px;"
+                        src="/assets/images/topbrands/sony.png" alt="">
                     <img style="padding-right: 40px;" src="/assets/images/topbrands/samsung.png" alt="">
                     <img style="padding-right: 40px;" src="/assets/images/topbrands/canon.png" alt="">
                     <img style="padding-right: 40px;" src="/assets/images/topbrands/huawei.png" alt="">
                     <img style="padding-left: 65px;" src="/assets/images/topbrands/lenevo.png" alt="">
                 </div>
-
-                
             </div>
         </div>
     </section>
 
 
-<section>
-    <div class="container">
-        <div class="highlited_brand">
-            <div class="left">
-                <h1 class="watch_title">SMART WATCH</h1>
-                <p class="watch_description">Various designs and brands</p>
-                <a class="btn offer_btn btn_v1" href="#">view</a>
-            </div>
-            <div class="right">
-                <div class="img">
-                    <img src="/assets/images/smart_watch/watch.png" alt="">
-                </div>
-            </div>
-        </div>
-        
-    </div>
-</section>
-
-
-<section>
-    <div class="container">
-        <div class="product_list">
-            <div class="section_heading">
-                <h2>Our Blogs</h2>
-                <div class="right_side">
-                    <a href="#">
-                        View All
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                </div>
-            </div>
-            <hr style="width: 1180px;">
-
-  <div style="padding-top: 50px;" class="blog_content">
-    <div class="blog_left">
-        <div class="img">
-            <img src="./assets/images/blogs/left.png" alt="">
-        </div>
-        <div class="upper_content">
-            <div class="calender">
-                <div class="calender_icon">
-                    <img src="./assets/images/icons/calender/calendar.png" alt="">
-                </div>
-                <div class="calender_text">
-                    <p>August , 8 , 2023</p>
-                </div>
-            </div>
-            <div class="clock">
-                <div class="clock_icon">
-                    <img src="./assets/images/icons/clock/timer.png" alt="">
-                </div>
-                <div class="clock_text">
-                    <p>3 min read</p>
-                </div>
-            </div>
-            
-        </div>
-        <div class="upper_content_heading">
-            <h3>Meta Platforms plans to release free...</h3>
-        </div>
-        <div class="upper_content_paragraph">
-            <p>The parent company of Facebook, Meta Platforms, is introducing software to help developers </p>
-        </div>
-    </div>
-    <div class="blog_right">
-        <div class="blog_right_content">
-            <div class="top_img">
-                <div class="img">
-                    <img src="./assets/images/blogs/right1.png" alt="">
-                </div>
-                <div>
-                    <h3>8 Things You Probably Didn’t Know About Headphones</h3>
-                    <p>Owning a headphone could mean a different thing for different people. For some, it act as a fashion statement. It’s easy to spot these people, the headphone are almost always just hanging around the neck.</p>
-                    <div class="calender">
-                        <div class="calender_icon">
-                            <img src="./assets/images/icons/calender/calendar.png" alt="">
-                        </div>
-                        <div class="calender_text">
-                            <p>August , 8 , 2023</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-            </div>
-                
-            <div class="bottom_img">
-                <div class="img">
-                    <img src="./assets/images/blogs/right2.png" alt="">
-                </div>
-                <div>
-                    <h3>Analyzing the August 17th Bitcoin Price Drop</h3>
-                    <p>On August 17th at 9:30PM UTC, Bitcoin’s price dropped more than 8% in a 10-minute window, to a two-month low of under $26k. This pulled</p>
-                    <div class="calender">
-                        <div class="calender_icon">
-                            <img src="./assets/images/icons/calender/calendar.png" alt="">
-                        </div>
-                        <div class="calender_text">
-                            <p>August , 8 , 2023</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>          
-
-            
-        </div>
-    </div>
-</section>
-
-
-<section>
-    <div class="container">
-        <div class="shipping_area">
-            <div class="shipping_content">
-                <div class="contents tech_content">
-                    <div class="tech_image">
-                        <img src="/assets/images/icons/desktop/icon.png" alt="">
-                    </div>
-                    <div class="tech_text">
-                        <p>Latest and Greatest Tech</p>
-                    </div>
-                </div>
-                <div class="contents guarantee_content">
-                    <div class="guarantee_image">
-                        <img src="/assets/images/icons/guarantee/icon.png" alt="">
-                    </div>
-                    <div class="guarantee_text">
-                        <p>Guarantee</p>
-                    </div>
-                </div>
-                <div class="contents loader_content">
-                    <div class="loader_image">
-                        <img src="/assets/images/icons/loader/load.png" alt="">
-                    </div>
-                    <div class="loader_text">
-                        <p>Free Shipping over 1000$</p>
-                    </div>
-                </div>
-                <div class="contents support_content">
-                    <div class="support_image">
-                        <img src="/assets/images/icons/support/icon.png" alt="">
-                    </div>
-                    <div class="support_text">
-                        <p>24/7 Support</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="top">
+    <section id="highlited_brand">
         <div class="container">
-            <div class="footer_top_content">
-                <div class="footer_item">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="">about us</a></li>
-                        <li><a href="">blog</a></li>
-                        <li><a href="">returns</a></li>
-                        <li><a href="">order status </a></li>
-                    </ul>
-                </div>
-                <div class="footer_item">
-                    <h3>Info</h3>
-                    <ul>
-                        <li><a href="">How it works?</a></li>
-                        <li><a href="">our promises</a></li>
-                        <li><a href="">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer_item">
-                    <h3>Contact us</h3>
-                    <ul>
-                        <li><a href="">
-                            <img src="/assets/images/icons/location/location.png" alt="">
-                            
-                            <span>123 Main Street, Anytown,USA</span>
-                        </a></li>
-                        <li><a href="">
-                            <img src="./assets/images/icons/calling/call-calling.png" alt="">
-                             <span>+1 (555) 123-4567</span>
-                        </a></li>
-                        <li><a href="">
-                            <img src="/assets/images/icons/sms/sms-edit.png" alt="">
-                             <span>TechHeimSupport@gmail.com</span>
-                        </a></li>
-                    </ul>
-                </div>  
-                <div class="footer_item">
-                    <h3>Sign up for News and updates</h3>
-                    <ul>
-                        <li>
-                            <form action="" class="subscribe_form">
-                                <i class="fa fa-user icon"></i>
-                                <input placeholder="E-mail Address" class="input" type="text">
-                                <button class="button">
-                                    <i class="fa fa-angle-right "></i>
-                                </button>
-                            </form>
-                        </li>
-                    </ul>
-                    <ul class="s_icon">
-                        <img src="/assets/images/icons/social_media/Facebook.png" alt="">
-                        <img src="/assets/images/icons/social_media/twitter.png" alt="">
-                        <img src="/assets/images/icons/social_media/Instagram.png" alt="">
-                        <img src="/assets/images/icons/social_media/Youtube.png" alt="">
-                    </ul>
-                </div>  
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="bottom">
-        <div class="container">
-            <div class="footer_bottom_content">
+            <div class="highlited_brand">
                 <div class="left">
-                    <p>&copy; tech-park-IT.</p>
+                    <h1 class="watch_title">SMART WATCH</h1>
+                    <p class="watch_description">Various designs and brands</p>
+                    <a class="btn offer_btn btn_v1" href="#">view</a>
                 </div>
                 <div class="right">
-                    <ul>
-                        <li><a href="">cookie settings</a></li>
-                        <li><a href="">Privacy Policy</a></li>
-                        <li><a href="">Terms and Conditions </a></li>
-                        <li><a href="">Imprint</a></li>
-                    </ul>
+                    <div class="img">
+                        <img src="/assets/images/smart_watch/watch.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="product_list">
+        <div class="container">
+            <div class="product_list">
+                <div class="section_heading">
+                    <h2>Our Blogs</h2>
+                    <div class="right_side">
+                        <a href="#">
+                            View All
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <hr style="width: 1180px; ">
+
+                <div style="padding-top: 50px;" class="blog_content">
+                    <div class="blog_left">
+                        <div class="img">
+                            <img src="./assets/images/blogs/left.png" alt="">
+                        </div>
+                        <div class="upper_content">
+                            <div class="calender">
+                                <div class="calender_icon">
+                                    <img src="./assets/images/icons/calender/calendar.png" alt="">
+                                </div>
+                                <div class="calender_text">
+                                    <p>August , 8 , 2023</p>
+                                </div>
+                            </div>
+                            <div class="clock">
+                                <div class="clock_icon">
+                                    <img src="./assets/images/icons/clock/timer.png" alt="">
+                                </div>
+                                <div class="clock_text">
+                                    <p>3 min read</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="upper_content_heading">
+                            <h3>Meta Platforms plans to release free...</h3>
+                        </div>
+                        <div class="upper_content_paragraph">
+                            <p>The parent company of Facebook, Meta Platforms, is introducing software to help
+                                developers </p>
+                        </div>
+                    </div>
+                    <div class="blog_right">
+                        <div class="blog_right_content">
+                            <div class="top_img">
+                                <div class="img">
+                                    <img src="./assets/images/blogs/right1.png" alt="">
+                                </div>
+                                <div>
+                                    <h3>8 Things You Probably Didn’t Know About Headphones</h3>
+                                    <p>Owning a headphone could mean a different thing for different people. For some,
+                                        it act as a fashion statement. It’s easy to spot these people, the headphone are
+                                        almost always just hanging around the neck.</p>
+                                    <div class="calender">
+                                        <div class="calender_icon">
+                                            <img src="./assets/images/icons/calender/calendar.png" alt="">
+                                        </div>
+                                        <div class="calender_text">
+                                            <p>August , 8 , 2023</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="bottom_img">
+                                <div class="img">
+                                    <img src="./assets/images/blogs/right2.png" alt="">
+                                </div>
+                                <div>
+                                    <h3>Analyzing the August 17th Bitcoin Price Drop</h3>
+                                    <p>On August 17th at 9:30PM UTC, Bitcoin’s price dropped more than 8% in a 10-minute
+                                        window, to a two-month low of under $26k. This pulled</p>
+                                    <div class="calender">
+                                        <div class="calender_icon">
+                                            <img src="./assets/images/icons/calender/calendar.png" alt="">
+                                        </div>
+                                        <div class="calender_text">
+                                            <p>August , 8 , 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
-   
+    </section>
+
+
+    <section id="shipping_area">
+        <div class="container">
+            <div class="shipping_area">
+                <div class="shipping_content">
+                    <div class="contents tech_content">
+                        <div class="tech_image">
+                            <img src="/assets/images/icons/desktop/icon.png" alt="">
+                        </div>
+                        <div class="tech_text">
+                            <p>Latest and Greatest Tech</p>
+                        </div>
+                    </div>
+                    <div class="contents guarantee_content">
+                        <div class="guarantee_image">
+                            <img src="/assets/images/icons/guarantee/icon.png" alt="">
+                        </div>
+                        <div class="guarantee_text">
+                            <p>Guarantee</p>
+                        </div>
+                    </div>
+                    <div class="contents loader_content">
+                        <div class="loader_image">
+                            <img src="/assets/images/icons/loader/load.png" alt="">
+                        </div>
+                        <div class="loader_text">
+                            <p>Free Shipping over 1000$</p>
+                        </div>
+                    </div>
+                    <div class="contents support_content">
+                        <div class="support_image">
+                            <img src="/assets/images/icons/support/icon.png" alt="">
+                        </div>
+                        <div class="support_text">
+                            <p>24/7 Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="top">
+            <div class="container">
+                <div class="footer_top_content">
+                    <div class="footer_item">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="">about us</a></li>
+                            <li><a href="">blog</a></li>
+                            <li><a href="">returns</a></li>
+                            <li><a href="">order status </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_item">
+                        <h3>Info</h3>
+                        <ul>
+                            <li><a href="">How it works?</a></li>
+                            <li><a href="">our promises</a></li>
+                            <li><a href="">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_item">
+                        <h3>Contact us</h3>
+                        <ul>
+                            <li><a href="">
+                                    <img src="/assets/images/icons/location/location.png" alt="">
+
+                                    <span>123 Main Street, Anytown,USA</span>
+                                </a></li>
+                            <li><a href="">
+                                    <img src="./assets/images/icons/calling/call-calling.png" alt="">
+                                    <span>+1 (555) 123-4567</span>
+                                </a></li>
+                            <li><a href="">
+                                    <img src="/assets/images/icons/sms/sms-edit.png" alt="">
+                                    <span>TechHeimSupport@gmail.com</span>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_item">
+                        <h3>Sign up for News and updates</h3>
+                        <ul>
+                            <li>
+                                <form action="" class="subscribe_form">
+                                    <i class="fa fa-user icon"></i>
+                                    <input placeholder="E-mail Address" class="input" type="text">
+                                    <button class="button">
+                                        <i class="fa fa-angle-right "></i>
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                        <ul class="s_icon">
+                            <img src="/assets/images/icons/social_media/Facebook.png" alt="">
+                            <img src="/assets/images/icons/social_media/twitter.png" alt="">
+                            <img src="/assets/images/icons/social_media/Instagram.png" alt="">
+                            <img src="/assets/images/icons/social_media/Youtube.png" alt="">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bottom">
+            <div class="container">
+                <div class="footer_bottom_content">
+                    <div class="left">
+                        <p>&copy; tech-park-IT.</p>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li><a href="">cookie settings</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Terms and Conditions </a></li>
+                            <li><a href="">Imprint</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
     <script src="./js/plugins/alpine.js"></script>
     <script src="./js/app.js"></script>

@@ -1,4 +1,6 @@
+
 window.Alpine = Alpine;
+
 
 let search_keywords = [
     "MacBook Pro ",
@@ -12,6 +14,7 @@ let search_keywords = [
     "Asus",
     "MagSafe",
 ]
+
 
 function increment_cart(){
     event.preventDefault();
