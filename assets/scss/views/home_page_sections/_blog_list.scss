@@ -5,8 +5,15 @@
     gap: 20px;
     @include xs {
         display: inline-block;
-        
           }
+
+    @include sm {
+            display: inline-block;
+              }
+
+              @include md {
+                display: inline-block;
+                  }
     .blog_left{
         .img{
             width: 300px;
@@ -15,6 +22,14 @@
                 border-top-left-radius: 8px;
                 border-top-right-radius: 8px;
                 @include xs{
+                    width: 97%;
+                }
+
+                @include sm{
+                    width: 97%;
+                }
+
+                @include md{
                     width: 97%;
                 }
             }
@@ -29,10 +44,33 @@
                 color: rgb(165, 159, 159);
                 justify-content: space-around;
             }
+            @include sm{
+                display: flex;
+                color: rgb(165, 159, 159);
+                justify-content: flex-start;
+            }
+
+            @include md{
+                display: flex;
+                color: rgb(165, 159, 159);
+                justify-content: flex-start;
+            }
 
             .calender{
                 display: flex;
                 align-items: center;
+
+                @include sm{
+                    .calender_text{
+                        padding-right: 29px;
+                    }
+                }
+
+                @include md{
+                    .calender_text{
+                        padding-right: 29px;
+                    }
+                }
                 
             }
             .clock{
@@ -65,6 +103,14 @@
                     display: inline-block;
                       }
 
+                 @include sm {
+                        display: inline-block;
+                          }
+
+                          @include md {
+                            display: inline-block;
+                              }
+
                 
 
                 h3{
@@ -72,11 +118,25 @@
                     @include xs {
                         font-size: 20px;
                           }
+                    @include sm {
+                            font-size: 20px;
+                              }
+
+                              @include md {
+                                font-size: 20px;
+                                  }
                 }
                 p{
                     @include xs {
                         font-size: 12px;
                           } 
+                     @include sm {
+                            font-size: 12px;
+                              }
+
+                              @include md {
+                                font-size: 12px;
+                                  }
                 }
                 .calender{
                     display: flex;
@@ -99,6 +159,14 @@
                 display: inline-block;
                   }
 
+                  @include sm {
+                    display: inline-block;
+                      }
+
+                      @include md {
+                        display: inline-block;
+                          }
+
                .calender{
                 display: flex;
                 align-items: center;
@@ -113,6 +181,12 @@
     padding-top: 20px;
     hr{
         @include xs{
+            display: none;
+        }
+        @include sm{
+            display: none;
+        }
+        @include md{
             display: none;
         }
     }

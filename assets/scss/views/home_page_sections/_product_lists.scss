@@ -102,3 +102,10 @@
         // }
     }
 }
+.new_product_list{
+    .product_list{
+        @include xs{
+            display: none;
+        }
+    }
+}
