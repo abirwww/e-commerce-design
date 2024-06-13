@@ -13,6 +13,11 @@
     z-index: 9;
     display: none;
 
+    @include xs{
+        width: 100vw;
+        right: calc(0px - 68px);
+    }
+
     &.active{
         display: block;
     }
@@ -40,6 +45,12 @@
                 display: flex;
                 gap: 20px;
                 align-items: center;
+                @include xs{
+                    flex-direction: column;
+                }
+                @include sm{
+                    flex-direction: column;
+                }
                 .img{
 
                 }

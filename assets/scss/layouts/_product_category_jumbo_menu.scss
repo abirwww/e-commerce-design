@@ -45,9 +45,7 @@
                                 &:hover{
                                     color: var(--primary);
                                 }
-                            }
-
-                           
+                            }  
                         }
                             
                         }
@@ -62,7 +60,6 @@
                 width: 260px;
                 // border: var(--border);
                 margin-left: 15px;
-                
                 ul{
                     li{
                                 display: flex;
@@ -73,31 +70,14 @@
                                 &:hover{
                                     color: var(--primary);
                                 }
-                                
-                        a{ 
-                            p{ 
-                                
-                                .text{
-                                     
-                                }
-                            }
-                        }
                     }
-                     span{
-                        
-                        .text{
-
-                        }
-                     }
                         .view_all{
                             a{
                                 color: var(--primary);
                                 font-size: 16px;
                                 }
                         }
-             
-                }
-                  
+                }  
                 }
                 .top-products{
                 // border: var(--border);
@@ -142,6 +122,42 @@
                } 
             }
         }
+    }
+
+
+    // responsive
+
+    
+
+    @include custom_media(0px, 991.9px){
+        z-index: 9999;
+    .product_list_menu{
+        .overly{
+            max-width: 400px;
+            width: 100%;
+            .product_categorys{
+                flex-direction: column;
+                .category_list{
+                    padding-bottom: 0;
+                    border-right: 0px;
+                }
+                .sub_category_list{
+                    flex-direction: column;
+                    flex: unset;
+                    .top-products{
+                        .nav_product_item{
+                            display: none;
+                        }
+                        .close{
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
     }
 }
 

@@ -20,289 +20,318 @@
 <body>
     <header id="header">
         <nav class="container">
+            
             <div class="nav_body">
+                
+
+                <div class="nav_toggler" onclick="toggle_nav()">
+                    <button>
+                        <img src="/assets/images/icons/toggler/menu.png" alt="">
+                    </button>
+                </div>
+                
                 <div class="logo">
                     <img src="./assets/images/logo/logo.svg" alt="">
                 </div>
-                <div class="menu">
-                    <ul class="menue_list">
-                        <li><a href="#">Home</a></li>
-                        <li>
-                            <a href="#" onclick="product_category_jumbo_menu.classList.toggle('active')">Products</a>
 
+                <ul class="nav_link_lg">
+                    <li><a href="/">Home</a></li>
+                    <li>
+                        <a href="#" onclick="product_category_jumbo_menu.classList.toggle('active')">Products</a>
+                    </li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
 
-                        </li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
+                <div class="menu" id="nav_bar_menue">
+                    <div class="overlay">
+                        <ul class="menue_list">
+                            <li class="nav_logo">
+                                <a href="/">
+                                    <img src="./assets/images/logo/logo.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="nav_close"  onclick="toggle_nav()" ><img src="/assets/images/icons/close/close.png" alt=""></li>
+                            <li><a href="/">Home</a></li>
+                            <li>
+                                <a href="#" onclick="product_category_jumbo_menu.classList.toggle('active')">Products</a>
+                            </li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="action_menues">
-                    <ul>
-                        <li>
-                            <a onclick="event.preventDefault(); search_modal.classList.toggle('active')" href="#"><img
-                                    src="./assets/images/icons/search.svg" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#" onclick="cart_items.classList.toggle('active')">
-                                <img src="./assets/images/icons/card.svg" alt="">
-                            </a>
-
-                            <div class="cart_items" id="cart_items">
-                                <div class="top">
-                                    <h3 class="cart_top_title">3 items</h3>
-                                </div>
-                                <div class="mid">
-                                    <div class="cart_item_list">
-                                        <div class="cart_item">
-                                            <div class="img">
-                                                <img src="./assets/images/products/cart_image2.png" alt="">
-                                            </div>
-                                            <div class="content">
-                                                <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA
-                                                    13.3 inch</h3>
-                                                <h4 class="color">Black</h4>
-                                                <div class="qty"> x 1</div>
-
-                                                <div class="extra_features">
-                                                    <ul>
-                                                        <li>
-                                                            <div class="img">
-                                                                <img src="./assets/images/icons/truck/truck.png" alt="">
-                                                            </div>
-                                                            <div>
-                                                                Free Delivery
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div class="img">
-                                                                <img src="./assets/images/icons/verify/verify.png"
-                                                                    alt="">
-                                                            </div>
-                                                            <div>
-                                                                Guaranteed
-                                                            </div>
-                                                        </li>
-                                                    </ul>
+                    
+                        <ul>
+                            <li>
+                                <a onclick="event.preventDefault(); search_modal.classList.toggle('active')" href="#"><img
+                                        src="./assets/images/icons/search.svg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#" onclick="cart_items.classList.toggle('active')">
+                                    <img src="./assets/images/icons/card.svg" alt="">
+                                </a>
+    
+                                <div class="cart_items" id="cart_items">
+                                    <div class="top">
+                                        <h3 class="cart_top_title">3 items</h3>
+                                    </div>
+                                    <div class="mid">
+                                        <div class="cart_item_list">
+                                            <div class="cart_item">
+                                                <div class="img">
+                                                    <img src="./assets/images/products/cart_image2.png" alt="">
                                                 </div>
-
-
-                                                <div class="qty_changer">
-                                                    <div class="price">
-                                                        $433.00
+                                                <div class="content">
+                                                    <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA
+                                                        13.3 inch</h3>
+                                                    <h4 class="color">Black</h4>
+                                                    <div class="qty"> x 1</div>
+    
+                                                    <div class="extra_features">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="img">
+                                                                    <img src="./assets/images/icons/truck/truck.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    Free Delivery
+                                                                </div>
+                                                            </li>
+    
+                                                            <li>
+                                                                <div class="img">
+                                                                    <img src="./assets/images/icons/verify/verify.png"
+                                                                        alt="">
+                                                                </div>
+                                                                <div>
+                                                                    Guaranteed
+                                                                </div>
+                                                            </li>
+                                                        </ul>
                                                     </div>
-                                                    <div class="qty_updater">
-                                                        <button>
-                                                            <img src="./assets/images/icons/trash/trash.png" alt="">
-                                                        </button>
-
-                                                        <div class="qty_input">
-                                                            <button onclick="decrement_cart()">
-                                                                <img src="./assets/images/icons/minus/minus.png" alt="">
+    
+    
+                                                    <div class="qty_changer">
+                                                        <div class="price">
+                                                            $433.00
+                                                        </div>
+                                                        <div class="qty_updater">
+                                                            <button>
+                                                                <img src="./assets/images/icons/trash/trash.png" alt="">
                                                             </button>
-                                                            <input type="number" value="1" min="1">
-                                                            <button onclick="increment_cart()">
-                                                                <img src="./assets/images/icons/add/add.png" alt="">
-                                                            </button>
+    
+                                                            <div class="qty_input">
+                                                                <button onclick="decrement_cart()">
+                                                                    <img src="./assets/images/icons/minus/minus.png" alt="">
+                                                                </button>
+                                                                <input type="number" value="1" min="1">
+                                                                <button onclick="increment_cart()">
+                                                                    <img src="./assets/images/icons/add/add.png" alt="">
+                                                                </button>
+                                                            </div>
                                                         </div>
                                                     </div>
+    
+    
                                                 </div>
-
-
                                             </div>
-                                        </div>
-                                        <div class="cart_item">
-                                            <div class="img">
-                                                <img src="./assets/images/products/cart_image.png" alt="">
-                                            </div>
-                                            <div class="content">
-                                                <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA
-                                                    13.3 inch</h3>
-                                                <h4 class="color">Black</h4>
-                                                <div class="qty"> x 1</div>
-
-                                                <div class="extra_features">
-                                                    <ul>
-                                                        <li>
-                                                            <div class="img">
-                                                                <img src="./assets/images/icons/truck/truck.png" alt="">
-                                                            </div>
-                                                            <div>
-                                                                Free Delivery
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div class="img">
-                                                                <img src="./assets/images/icons/verify/verify.png"
-                                                                    alt="">
-                                                            </div>
-                                                            <div>
-                                                                Guaranteed
-                                                            </div>
-                                                        </li>
-                                                    </ul>
+                                            <div class="cart_item">
+                                                <div class="img">
+                                                    <img src="./assets/images/products/cart_image.png" alt="">
                                                 </div>
-
-
-                                                <div class="qty_changer">
-                                                    <div class="price">
-                                                        $433.00
+                                                <div class="content">
+                                                    <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA
+                                                        13.3 inch</h3>
+                                                    <h4 class="color">Black</h4>
+                                                    <div class="qty"> x 1</div>
+    
+                                                    <div class="extra_features">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="img">
+                                                                    <img src="./assets/images/icons/truck/truck.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    Free Delivery
+                                                                </div>
+                                                            </li>
+    
+                                                            <li>
+                                                                <div class="img">
+                                                                    <img src="./assets/images/icons/verify/verify.png"
+                                                                        alt="">
+                                                                </div>
+                                                                <div>
+                                                                    Guaranteed
+                                                                </div>
+                                                            </li>
+                                                        </ul>
                                                     </div>
-                                                    <div class="qty_updater">
-                                                        <button>
-                                                            <img src="./assets/images/icons/trash/trash.png" alt="">
-                                                        </button>
-
-                                                        <div class="qty_input">
-                                                            <button onclick="decrement_cart()">
-                                                                <img src="./assets/images/icons/minus/minus.png" alt="">
+    
+    
+                                                    <div class="qty_changer">
+                                                        <div class="price">
+                                                            $433.00
+                                                        </div>
+                                                        <div class="qty_updater">
+                                                            <button>
+                                                                <img src="./assets/images/icons/trash/trash.png" alt="">
                                                             </button>
-                                                            <input type="number" value="1" min="1">
-                                                            <button onclick="increment_cart()">
-                                                                <img src="./assets/images/icons/add/add.png" alt="">
-                                                            </button>
+    
+                                                            <div class="qty_input">
+                                                                <button onclick="decrement_cart()">
+                                                                    <img src="./assets/images/icons/minus/minus.png" alt="">
+                                                                </button>
+                                                                <input type="number" value="1" min="1">
+                                                                <button onclick="increment_cart()">
+                                                                    <img src="./assets/images/icons/add/add.png" alt="">
+                                                                </button>
+                                                            </div>
                                                         </div>
                                                     </div>
+    
+    
                                                 </div>
-
-
                                             </div>
-                                        </div>
-                                        <div class="cart_item">
-                                            <div class="img">
-                                                <img src="./assets/images/products/cart_image1.png" alt="">
-                                            </div>
-                                            <div class="content">
-                                                <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA
-                                                    13.3 inch</h3>
-                                                <h4 class="color">Black</h4>
-                                                <div class="qty"> x 1</div>
-
-                                                <div class="extra_features">
-                                                    <ul>
-                                                        <li>
-                                                            <div class="img">
-                                                                <img src="./assets/images/icons/truck/truck.png" alt="">
-                                                            </div>
-                                                            <div>
-                                                                Free Delivery
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div class="img">
-                                                                <img src="./assets/images/icons/verify/verify.png"
-                                                                    alt="">
-                                                            </div>
-                                                            <div>
-                                                                Guaranteed
-                                                            </div>
-                                                        </li>
-                                                    </ul>
+                                            <div class="cart_item">
+                                                <div class="img">
+                                                    <img src="./assets/images/products/cart_image1.png" alt="">
                                                 </div>
-
-
-                                                <div class="qty_changer">
-                                                    <div class="price">
-                                                        $433.00
+                                                <div class="content">
+                                                    <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA
+                                                        13.3 inch</h3>
+                                                    <h4 class="color">Black</h4>
+                                                    <div class="qty"> x 1</div>
+    
+                                                    <div class="extra_features">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="img">
+                                                                    <img src="./assets/images/icons/truck/truck.png" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    Free Delivery
+                                                                </div>
+                                                            </li>
+    
+                                                            <li>
+                                                                <div class="img">
+                                                                    <img src="./assets/images/icons/verify/verify.png"
+                                                                        alt="">
+                                                                </div>
+                                                                <div>
+                                                                    Guaranteed
+                                                                </div>
+                                                            </li>
+                                                        </ul>
                                                     </div>
-                                                    <div class="qty_updater">
-                                                        <button>
-                                                            <img src="./assets/images/icons/trash/trash.png" alt="">
-                                                        </button>
-
-                                                        <div class="qty_input">
-                                                            <button onclick="decrement_cart()">
-                                                                <img src="./assets/images/icons/minus/minus.png" alt="">
+    
+    
+                                                    <div class="qty_changer">
+                                                        <div class="price">
+                                                            $433.00
+                                                        </div>
+                                                        <div class="qty_updater">
+                                                            <button>
+                                                                <img src="./assets/images/icons/trash/trash.png" alt="">
                                                             </button>
-                                                            <input type="number" value="1" min="1">
-                                                            <button onclick="increment_cart()">
-                                                                <img src="./assets/images/icons/add/add.png" alt="">
-                                                            </button>
+    
+                                                            <div class="qty_input">
+                                                                <button onclick="decrement_cart()">
+                                                                    <img src="./assets/images/icons/minus/minus.png" alt="">
+                                                                </button>
+                                                                <input type="number" value="1" min="1">
+                                                                <button onclick="increment_cart()">
+                                                                    <img src="./assets/images/icons/add/add.png" alt="">
+                                                                </button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="bottom">
-                                    <div class="left">
-                                        <h5 class="title">Grand total</h5>
-                                        <h4 class="amount">$543.02</h4>
+    
+                                    <div class="bottom">
+                                        <div class="left">
+                                            <h5 class="title">Grand total</h5>
+                                            <h4 class="amount">$543.02</h4>
+                                        </div>
+                                        <div class="right">
+                                            <a href="">
+                                                <span class="title">
+                                                    Proceed to Cart
+                                                </span>
+                                                <img src="./assets/images/icons/addToCart/shopping-cart.png" alt="">
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="right">
-                                        <a href="">
-                                            <span class="title">
-                                                Proceed to Cart
-                                            </span>
-                                            <img src="./assets/images/icons/addToCart/shopping-cart.png" alt="">
-                                        </a>
-                                    </div>
                                 </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <a href="#" onclick="user_drop_down_actions.classList.toggle('active')"><img
-                                    src="./assets/images/icons/profile.svg" alt=""></a>
-                            <div id="user_drop_down_actions" class="user_drop_down_actions">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <div class="icon">
-                                                <img src="./assets/images/icons/profile_icons/profile_icon_1.png"
-                                                    alt="">
-                                            </div>
-                                            <div class="content">
-                                                <h4>Jimmy Smith</h4>
-                                                <p>smith1996@gmail.com</p>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="icon">
-                                                <img src="./assets/images/icons/profile_icons/profile_icon_2.png"
-                                                    alt="">
-                                            </div>
-                                            <div class="content">
-                                                <h4>Orders</h4>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="icon">
-                                                <img src="./assets/images/icons/profile_icons/profile_icon_3.png"
-                                                    alt="">
-                                            </div>
-                                            <div class="content">
-                                                <h4>Wish List</h4>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="icon">
-                                                <img src="./assets/images/icons/profile_icons/profile_icon_4.png"
-                                                    alt="">
-                                            </div>
-                                            <div class="content">
-                                                <h4>Payments</h4>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="icon">
-                                                <img src="./assets/images/icons/profile_icons/profile_icon_5.png"
-                                                    alt="">
-                                            </div>
-                                            <div class="content">
-                                                <h4>Log out</h4>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+    
+                            <li>
+                                <a href="#" onclick="user_drop_down_actions.classList.toggle('active')"><img
+                                        src="./assets/images/icons/profile.svg" alt=""></a>
+                                <div id="user_drop_down_actions" class="user_drop_down_actions">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <div class="icon">
+                                                    <img src="./assets/images/icons/profile_icons/profile_icon_1.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="content">
+                                                    <h4>Jimmy Smith</h4>
+                                                    <p>smith1996@gmail.com</p>
+                                                </div>
+                                            </a>
+                                            <a href="">
+                                                <div class="icon">
+                                                    <img src="./assets/images/icons/profile_icons/profile_icon_2.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="content">
+                                                    <h4>Orders</h4>
+                                                </div>
+                                            </a>
+                                            <a href="">
+                                                <div class="icon">
+                                                    <img src="./assets/images/icons/profile_icons/profile_icon_3.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="content">
+                                                    <h4>Wish List</h4>
+                                                </div>
+                                            </a>
+                                            <a href="">
+                                                <div class="icon">
+                                                    <img src="./assets/images/icons/profile_icons/profile_icon_4.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="content">
+                                                    <h4>Payments</h4>
+                                                </div>
+                                            </a>
+                                            <a href="">
+                                                <div class="icon">
+                                                    <img src="./assets/images/icons/profile_icons/profile_icon_5.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="content">
+                                                    <h4>Log out</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    
+                    
                 </div>
             </div>
         </nav>

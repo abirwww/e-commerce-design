@@ -1,3 +1,13 @@
+header{
+    position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: white;
+    box-shadow: 0px 0px 0px rgb(63, 62, 62);
+
+}
 nav{
     .nav_body{
         // border: var(--border);
@@ -5,15 +15,81 @@ nav{
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 18px 0px;
+        align-items: center;
+
+        .nav_toggler{
+            display: none;
+            button{
+                background-color: transparent;
+                border: 0;
+                outline: 0;
+                padding-top: 18px;
+                cursor: pointer;
+                transition-duration: .3s;
+
+                @include xs{
+                    padding-top: 0;
+                }
+               
+            }
+            @include custom_media(0px, 991.5px){
+                display: block;
+            }
+        }
+
         .logo{
             img{
                 height: 65px;
+
+                @include xs{
+                    height: 40px;
+                }
+            }
+        }
+        .nav_link_lg{
+            // border: var(--border);
+            display: flex; 
+            justify-content: space-between;
+            height: 100%;
+            align-items: center;
+            gap: 65px;
+            li{
+                // position: relative; 
+                a{  
+                    font-size: 18px;
+                    color: var(--black);
+                    position: relative;
+
+                    &::after{
+                        content: '';
+                        height: 2px;
+                        width: 0px;
+                        position: absolute;
+                        bottom: -10px;
+                        left: -10px;      
+                        background: linear-gradient(147.38deg, rgba(12, 104, 244, 0.3) 60.98%, rgba(12, 104, 244, 0.7) 81.93%, rgba(12, 104, 244, 0.3) 99.45%);
+                        transition-duration: .2s;
+                    }
+                    &:hover{
+                        color: var(--primary);
+                        &::after{
+                            width: calc(100% + 30px);
+                        }
+                    }
+                }
+            } 
+            @include custom_media(0px, 991.5px){
+                display: none;
             }
         }
         .menu{
             // border: var(--border);
-            .menue_list{
-                    // border: var(--border);
+            display: none;
+            @include custom_media(0px, 991.5px){
+                display: block;
+            }
+            ul{
+                    border: var(--border);
                     display: flex; 
                     justify-content: space-between;
                     height: 100%;
@@ -45,24 +121,70 @@ nav{
                         }
                     }
             } 
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            z-index: 999;
+            top: 0;
+            left: calc(-100vw - 100px );
+            transition-duration: .3s;
+
+            &.active{
+                left: 0;
+            }
+
+            .overlay{
+                background-color: rgba(0, 0, 0, .3);
+                backdrop-filter: blur(3px);
+                height: 100vh;
+
+            }
+
+            ul{
+                width: calc(100% - 30px);
+                max-width: 400px;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 30px;
+                padding: 20px;
+                box-shadow: 0px 0px 5px black;
+                background-color: white;
+                height: 100vh;
+                position: relative;
+
+                &.nav_logo, &.nav_close{
+                    display: block;
+                    a{
+                        display: block;
+                    }
+                }
+                .nav_close{
+                   position: absolute;
+                   top: 15px;
+                   right: 15px;
+                   height: 30px;
+                   width: 30px;
+                   line-height: 30px;
+                   text-align: center;
+                   cursor: pointer;
+                }
+
+            }
+            
         }
         .action_menues{
         // border: var(--border);
             ul{
                 display: flex; 
-                    justify-content: space-between;
-                    height: 100%;
-                    align-items: center;
+                justify-content: space-between;
+                height: 100%;
+                align-items: center;
                     
                 li{
                     position: relative;
-                    
-                    a{
-                       
-                        img{
-                            
-                        }
-                    }
+
+                   
                 }
             }
         }
