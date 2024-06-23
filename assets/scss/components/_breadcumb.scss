@@ -2,19 +2,22 @@
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
+    padding: 28px 0px;
 
     li{
+        color: black;
         a{
             font-family: var(--inter);
             font-size: 18px;
             line-height: 18px;
             position: relative;
-
-            &::before{
-                content: "\f105";
-                font-family: var(--fa-style-family, "Font Awesome 6 Free");
-                font-weight: 900;
-            }
-        }
+            color: black;
+            // &::before{
+            //     content: "\f105";
+            //     font-family: var(--fa-style-family, "Font Awesome 6 Free");
+            //     font-weight: 900;
+            // }    
+        } 
     }
 }
+

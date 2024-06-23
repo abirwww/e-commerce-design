@@ -16,37 +16,125 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
+
     <style>
-        .tag {
-            margin: 10px;
-            display: inline-flex;
-            align-items: center;
-            background-color: #ffffff;
-            border: 1px solid #000000;
-            border-radius: 15px;
-            padding: 5px 10px;
+       
+        .sub_container{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-gap: 10px;
+            max-width: 1200px;
+            background-color: white;
+            padding: 20px;
+            
+        }
+        .image-section {
+            grid-column: span 6;
+        }
+        .image-section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .details-section {
+            grid-column: span 6;
+        }
+        .details-section h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .details-section .price {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #ff0000;
+        }
+        .details-section .old-price {
+            text-decoration: line-through;
+            color: #888;
+        }
+        .details-section .stock-status {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .details-section .installments {
+            margin-top: 20px;
             font-size: 14px;
-            color: #000000;
-          }
-          
-          .tag .tag-text {
-            margin-right: 8px;
-          }
-          
-          .tag .tag-close {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 20px;
-            height: 20px;
-            background-color: #ffffff;
-            border: 1px solid #000000;
-            border-radius: 50%;
-            font-size: 12px;
-            color: #000000;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 5px;
             cursor: pointer;
-            line-height: 0;
-          }  
+        }
+        .buttons button:last-child {
+            background-color: #6c757d;
+        }
+        .buttons button:hover {
+            opacity: 0.9;
+        }
+        .thumbnail-section {
+            grid-column: span 6;
+            display: flex;
+            justify-content: space-between;
+        }
+        .thumbnail-section img {
+            width: 22%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+
+     
+
+
+
+        .sub_containers{
+            padding-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-gap: 10px;
+            max-width: 800px;
+            background-color: white;
+            padding: 20px;
+            
+        }
+        .technical-details {
+            grid-column: span 12;
+        }
+        .technical-details h2 {
+            margin-top: 0;
+            font-size: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .technical-details dl {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 10px;
+        }
+        .technical-details dt {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .technical-details dd {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        .show-less {
+            color: #007bff;
+            cursor: pointer;
+            text-align: right;
+            margin-top: 10px;
+        }
+        .show-less:hover {
+            text-decoration: underline;
+        }
     </style>
 
 </head>
@@ -731,7 +819,7 @@
     </section>
 
 
-
+    
     <section id="bread_cumb">
         <div class="container">
             <ul class="bread_cumb_content">
@@ -739,233 +827,184 @@
                     <i class='fa fa-angle-right'></i>
                     <a href="#">Home</a>
                 </li>
-                <li>
-                    <i class='fa fa-angle-right'></i>
-                    <a href="#">Laptop</a>
-                    
-                </li>
-                <li>
-                    <i class='fa fa-angle-right'></i>
-                    <a href="#">Dell</a>
-                </li>
+                
                 <li>
                     <i class='fa fa-angle-right' ></i>
-                    <a href="#" style="color: var(--primary); text-decoration: underline;">Core i5</a>
+                    <a href="#" style="color: var(--primary); text-decoration: underline;">Laptop</a>
                 </li>
             </ul>
         </div>
     </section>
 
-    <!-- category list start -->
-     <section>
-        <div class="containre">
-            <div class="category_list_sub_category">
-                <div class="item">
+<!-- laptop details start -->
 
-                </div>
-            </div>
-        </div>
-
-     </section>
-    <!-- category list end -->
-
-     
-
-    <!-- products_icon start -->
-     <section>
-        <div class="container" style="display: flex; padding: 20px; justify-content: space-between;">
-
-            <div class="product_icon">
-                <div class="product_content">
-                    <img src="../assets/images/products_icons/mobile.png" alt="">
-                    <p>Mobile</p>
-                </div>
-            </div>
-            <div class="product_icon">
-                <div class="product_content">
-                    <img src="../assets/images/products_icons/monitor.png" alt="">
-                    <p>Laptop</p>
-                </div>
-            </div>
-            <div class="product_icon">
-                <div class="product_content">
-                    <img src="../assets/images/products_icons/tab.png" alt="">
-                    <p>Tablet</p>
-                </div>
-            </div>
-            <div class="product_icon">
-                <div class="product_content">
-                    <img src="../assets/images/products_icons/headphones.png" alt="">
-                    <p>Audio</p>
-                </div>
-            </div>
-            <div class="product_icon">
-                <div class="product_content">
-                    <img src="../assets/images/products_icons/watch-status.png" alt="">
-                    <p>Wearable</p>
-                </div>
-            </div>
-            <div class="product_icon">
-                <div class="product_content">
-                    <img src="../assets/images/products_icons/camera.png" alt="">
-                    <p>Camera</p>
-                </div>
-            </div>
-            <div class="product_icon">
-                <div class="product_content">
-                    <img src="../assets/images/products_icons/game.png" alt="">
-                    <p>Gaming</p>
-                </div>
-            </div>
-            <div class="product_icon">
-                <div class="product_content">
-                    <img src="../assets/images/products_icons/data.png" alt="">
-                    <p>Network</p>
-                </div>
-            </div>
-            <div class="product_icon">
-                <div class="product_content">
-                    <img src="../assets/images/products_icons/devices.png" alt="">
-                    <p>Accessories</p>
-                </div>
-            </div>
-
-        </div>
-
-     </section>
-    <!-- products_icon end -->
-
-
-   <!-- products buttons start-->
-   <section class="products_buttons">
+<section>
     <div class="container">
-        <div class="tag">
-            <span class="tag-text">Silver</span>
-            <span class="tag-close">&times;</span>
-        </div>
-
-        <div class="tag">
-            <span class="tag-text">Intel Core i9</span>
-            <span class="tag-close">&times;</span>
-        </div>
-
-        <div class="tag">
-            <span class="tag-text">Apple</span>
-            <span class="tag-close">&times;</span>
-        </div>
-
-        <div class="tag">
-            <span class="tag-text">12   GB</span>
-            <span class="tag-close">&times;</span>
-        </div>
-
-        <div class="tag">
-            <span class="tag-text">Silver</span>
-            <span class="tag-close">&times;</span>
+        <div class="section_details">
+            <div class="laptop_details">
+                <div class="laptop_content">
+                    
+<div class="sub_container">
+    <div class="image-section">
+        <img src="../assets/images/products/laptop_details/npd2.png" alt="MacBook Pro">
+        <div class="thumbnail-section">
+            <img src="../assets/images/products/laptop_details/a.png" alt="Thumbnail 1">
+            <img src="../assets/images/products/laptop_details/c.png" alt="Thumbnail 2">
+            <img src="../assets/images/products/laptop_details/d.png" alt="Thumbnail 3">
+            <img src="../assets/images/products/laptop_details/e.png" alt="Thumbnail 4">
         </div>
     </div>
- </section>
-<!-- products buttons end-->
+    <div class="details-section">
+        <h1>MacBook Pro M2 MNEJ3 2022 LLA 13.3 inch</h1>
+        <div class="price">$1299.00</div>
+        <div class="old-price">$1480.87</div>
+        <div class="stock-status">In stock</div>
+        <div class="installments">Buy in installments: choose your installment period</div>
+        <div class="buttons">
+            <button>Buy Now</button>
+            <button>Add to Cart</button>
+        </div>
 
 
-   <!-- product Detail start -->
-   <section>
-    <div class="container">
-        <div class="sub_container">
         
-            <aside class="sidebar">
-                <!-- Sidebar content, e.g., filters -->
-                <div class="filter">
-                    <h2>Brand</h2>
-                    <label><input type="checkbox"> ASUS</label>
-                    <label><input type="checkbox"> Acer</label>
-                    <label><input type="checkbox"> Apple</label>
-                    <label><input type="checkbox"> Dell</label>
-                </div>
-                <div class="filter">
-                    <h2>Color</h2>
-                    <!-- Color options -->
-                </div>
-                <div class="filter">
-                    <h2>Discount</h2>
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="filter">
-                    <h2>Price</h2>
-                    <!-- Price range slider -->
-                </div>
-                <div class="filter">
-                    <h2>RAM</h2>
-                    <label><input type="checkbox"> 32 GB</label>
-                    <label><input type="checkbox"> 16 GB</label>
-                    <label><input type="checkbox"> 12 GB</label>
-                    <label><input type="checkbox"> 8 GB</label>
-                </div>
-            </aside>
-            <main class="products">
-                <!-- Product grid -->
-                <div class="product">
-                    <img src="../assets/images/products/p7.png" alt="Product 1">
-                    <p><a href="laptopdetails.html">Apple MacBook Air 15" W/ Touch...</a></p>
-                    <button>Add to cart</button>
-                </div>
-                <div class="product">
-                    <img  src="../assets/images/products/laptop/image2.png" alt="Product 2">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
-                </div>
-                <div class="product">
-                    <img src="../assets/images/products/laptop/image3.png" alt="Product 1">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
-                </div>
-                <div class="product">
-                    <img src="../assets/images/products/laptop/image4.png" alt="Product 2">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
-                </div>
-                <div class="product">
-                    <img src="../assets/images/products/laptop/image5.png" alt="Product 1">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
-                </div>
-                <div class="product">
-                    <img src="../assets/images/products/laptop/image6.png" alt="Product 2">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
-                </div>
-                <div class="product">
-                    <img src="../assets/images/products/laptop/image7.png" alt="Product 1">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
-                </div>
-                <div class="product">
-                    <img src="../assets/images/products/laptop/image8.png" alt="Product 2">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
-                </div>
-                <div class="product">
-                    <img src="../assets/images/products/bs1.png" alt="Product 1">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
-                </div>
-                
-                <!-- More product items -->
-            </main>
-        </div>
+
+
+
     </div>
+
+
+
+
     
-    
-   </section>
-  <!-- product Detail rtart -->
+
+
+
+</div>
+
+
+
+
+
+
+
+                </div>
+
+
+                <div class="sub_containers">
+                    <div class="technical-details">
+                        <h2>Technical Details</h2>
+                        <dl>
+                            <dt>Display</dt>
+                            <dd>13.3-inch (diagonal) LED-backlit display with IPS technology</dd>
+                            <dt>Graphics</dt>
+                            <dd>Apple 10-core GPU</dd>
+                            <dt>Processor</dt>
+                            <dd>Apple M2 chip</dd>
+                            <dt>In the box</dt>
+                            <dd>67W USB-C Power Adapter, USB-C Charge Cable (2 m)</dd>
+                            <dt>Height</dt>
+                            <dd>0.61 inch (1.56 cm)</dd>
+                            <dt>Width</dt>
+                            <dd>11.97 inches (30.41 cm)</dd>
+                            <dt>Weight</dt>
+                            <dd>3.0 pounds (1.4 kg)</dd>
+                            <dt>Release Date</dt>
+                            <dd>6/24/2022</dd>
+                        </dl>
+                        <div class="show-less">Show Less ^</div>
+                    </div>
+                </div>
+            
+
+
+                
+            </div>
+
+           
+
+
+
+        </div>
+
+
+
+
+        <div class="section_heading">
+            <h2>Similar Products</h2>
+            <div class="right_side">
+                <a href="#">
+                    View All
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+
+
+
+        <main class="products">
+            <!-- Product grid -->
+            <div class="product">
+                <img src="../assets/images/products/p7.png" alt="Product 1">
+                <p><a href="laptopdetails.html">Apple MacBook Air 15" W/ Touch...</a></p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product">
+                <img  src="../assets/images/products/laptop/image2.png" alt="Product 2">
+                <p>Apple MacBook Air 15" W/ Touch...</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="../assets/images/products/laptop/image3.png" alt="Product 1">
+                <p>Apple MacBook Air 15" W/ Touch...</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="../assets/images/products/laptop/image4.png" alt="Product 2">
+                <p>Apple MacBook Air 15" W/ Touch...</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="../assets/images/products/laptop/image5.png" alt="Product 1">
+                <p>Apple MacBook Air 15" W/ Touch...</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="../assets/images/products/laptop/image6.png" alt="Product 2">
+                <p>Apple MacBook Air 15" W/ Touch...</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="../assets/images/products/laptop/image7.png" alt="Product 1">
+                <p>Apple MacBook Air 15" W/ Touch...</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="../assets/images/products/laptop/image8.png" alt="Product 2">
+                <p>Apple MacBook Air 15" W/ Touch...</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="../assets/images/products/bs1.png" alt="Product 1">
+                <p>Apple MacBook Air 15" W/ Touch...</p>
+                <button>Add to cart</button>
+            </div>
+            
+            <!-- More product items -->
+        </main>
+
+
+        
+    </div>
+</section>
+
+
+<!-- laptop details end -->
+
 
 
     <section id="shipping_area">
         <div class="container">
-            <div class="shipping_area">
+            <div class="shipping_area" style="padding-top: 40px;">
                 <div class="shipping_content">
                     <div class="contents tech_content">
                         <div class="tech_image">

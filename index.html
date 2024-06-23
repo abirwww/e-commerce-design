@@ -732,6 +732,7 @@
                         }"
                 class="top_categories">
                 <template x-for="(product, index) in products" :key="index">
+                    <a href="pages\category.html">
                     <div class="item">
                         <div class="img">
                             <img :src="product[0]" alt="Product Image">
@@ -740,6 +741,7 @@
                             <h3 x-text="product[1]"> </h3>
                         </div>
                     </div>
+                    </a>
                 </template>
             </div>
         </div>
@@ -1384,6 +1386,13 @@
     </section>
 
 
+    <!-- product Detail rtart -->
+     <section>
+        
+     </section>
+    <!-- product Detail rtart -->
+
+
     <section id="shipping_area">
         <div class="container">
             <div class="shipping_area">
@@ -1424,6 +1433,9 @@
             </div>
         </div>
     </section>
+
+
+
 
     <footer id="footer">
         <div class="top">
