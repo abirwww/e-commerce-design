@@ -1,0 +1,26 @@
+.content_text_order{
+    display: flex;
+    gap: 0px;
+.middle_content{
+    .content{
+        .sub_content{
+            display: flex;
+            gap: 100px;
+        }
+        .image_content{
+            .image{
+                display: flex;
+                gap: 20px;
+                padding: 10px;
+            }
+        }
+    }
+    .content_numeric_info{
+        display: flex;
+        gap: 100px;
+        .text_n_numeric{
+            
+        }
+    }
+}
+}

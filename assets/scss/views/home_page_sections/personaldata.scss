@@ -1,0 +1,86 @@
+.content_text{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .left_content{
+        padding: 20px;
+        .user_payment, .security, .contact, .wish, .discount, .user_bag, .user_data, .user{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 10px;
+        }
+        .log{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            p{
+                color: red;
+            }
+        }
+        
+        
+    }
+
+    .middle_content{
+        .user_identity{
+            padding-top: 50px;
+            // text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            color: grey;
+          }
+          
+          h2 {
+            margin-bottom: 10px;
+          }
+          
+          .form-group {
+            margin-bottom: 15px;
+            .group_content{
+                display: flex;
+                gap: 20px;
+                .editing{
+                    margin-left: 80px;
+                }
+            }
+          }
+          
+          label {
+            display: block;
+            margin-bottom: 5px;
+          }
+          
+          input,
+          textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+          }
+          
+          button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+          }
+    }
+    
+
+    .middle_content{
+       
+        .form-group{
+           label{
+            color: grey;
+           }
+            padding-top: 50px;
+            .mail{
+                padding-top: 127px;
+            }
+        }
+        
+    }
+
+
+}

@@ -14,135 +14,6 @@
     <!-- <link rel="stylesheet" href="../assets/fonts/google_icons.css">-->
     <link rel="stylesheet" href="../assets/styles/app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-
-    <style>
-        .sub_container {
-            
-        }
-
-        .image-section {
-            grid-column: span 6;
-        }
-
-        .image-section img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .details-section {
-            grid-column: span 6;
-        }
-
-        .details-section h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        .details-section .price {
-            margin-top: 20px;
-            font-size: 24px;
-            color: #ff0000;
-        }
-
-        .details-section .old-price {
-            text-decoration: line-through;
-            color: #888;
-        }
-
-        .details-section .stock-status {
-            margin-top: 10px;
-            font-size: 16px;
-        }
-
-        .details-section .installments {
-            margin-top: 20px;
-            font-size: 14px;
-        }
-
-        .buttons {
-            margin-top: 20px;
-        }
-
-        .buttons button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin-right: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .buttons button:last-child {
-            background-color: #6c757d;
-        }
-
-        .buttons button:hover {
-            opacity: 0.9;
-        }
-
-        .thumbnail-section {
-            grid-column: span 6;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .thumbnail-section img {
-            width: 22%;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .sub_containers {
-            padding-top: 20px;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-gap: 10px;
-            max-width: 800px;
-            background-color: white;
-            padding: 20px;
-
-        }
-
-        .technical-details {
-            grid-column: span 12;
-        }
-
-        .technical-details h2 {
-            margin-top: 0;
-            font-size: 20px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 10px;
-        }
-
-        .technical-details dl {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            grid-gap: 10px;
-        }
-
-        .technical-details dt {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .technical-details dd {
-            margin: 0;
-            margin-bottom: 10px;
-        }
-
-        .show-less {
-            color: #007bff;
-            cursor: pointer;
-            text-align: right;
-            margin-top: 10px;
-        }
-
-        .show-less:hover {
-            text-decoration: underline;
-        }
-    </style>
 
 </head>
 
@@ -164,13 +35,13 @@
                 </div>
 
                 <ul class="nav_link_lg">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/index.html">Home</a></li>
                     <li>
                         <a href="#" onclick="product_category_jumbo_menu.classList.toggle('active')">Products</a>
                     </li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="./contuctus.html">Contact Us</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
                 </ul>
 
                 <div class="menu" id="nav_bar_menue">
@@ -467,8 +338,6 @@
                             </div>
                         </li>
                     </ul>
-
-
                 </div>
             </div>
         </nav>
@@ -833,6 +702,10 @@
         </div>
     </section>
 
+
+
+    <!-- page content start -->
+
     <section id="bread_cumb">
         <div class="container">
             <ul class="bread_cumb_content">
@@ -843,197 +716,115 @@
 
                 <li>
                     <i class='fa fa-angle-right'></i>
-                    <a href="#" style="color: var(--primary); text-decoration: underline;">Laptop</a>
+                    <a href="#" style="color: var(--primary); text-decoration: underline;">Blog</a>
                 </li>
             </ul>
         </div>
     </section>
+    <!-- page main content -->
 
-    <!-- laptop details start -->
-
-    <section>
-        <div class="container">
-            <div class="section_details">
-                <div class="laptop_details">
-                    <div class="laptop_content">
-
-                        <div class="sub_container">
-                            <div class="image-section">
-                                <img src="../assets/images/products/laptop_details/npd2.png" alt="MacBook Pro">
-                                <div class="thumbnail-section">
-                                    <img src="../assets/images/products/laptop_details/a.png" alt="Thumbnail 1">
-                                    <img src="../assets/images/products/laptop_details/c.png" alt="Thumbnail 2">
-                                    <img src="../assets/images/products/laptop_details/d.png" alt="Thumbnail 3">
-                                    <img src="../assets/images/products/laptop_details/e.png" alt="Thumbnail 4">
-                                </div>
-                            </div>
-                            <div class="details-section">
-                                <h1>MacBook Pro M2 MNEJ3 2022 LLA 13.3 inch</h1>
-                                <div class="price">$1299.00</div>
-                                <div class="old-price">$1480.87</div>
-                                <div class="stock-status">In stock</div>
-                                <div class="installments">Buy in installments: choose your installment period</div>
-                                <div class="buttons">
-                                    <button>Buy Now</button>
-                                    <button>Add to Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="sub_containers">
-                        <div class="technical-details">
-                            <h2>Technical Details</h2>
-                            <dl>
-                                <dt>Display</dt>
-                                <dd>13.3-inch (diagonal) LED-backlit display with IPS technology</dd>
-                                <dt>Graphics</dt>
-                                <dd>Apple 10-core GPU</dd>
-                                <dt>Processor</dt>
-                                <dd>Apple M2 chip</dd>
-                                <dt>In the box</dt>
-                                <dd>67W USB-C Power Adapter, USB-C Charge Cable (2 m)</dd>
-                                <dt>Height</dt>
-                                <dd>0.61 inch (1.56 cm)</dd>
-                                <dt>Width</dt>
-                                <dd>11.97 inches (30.41 cm)</dd>
-                                <dt>Weight</dt>
-                                <dd>3.0 pounds (1.4 kg)</dd>
-                                <dt>Release Date</dt>
-                                <dd>6/24/2022</dd>
-                            </dl>
-                            <div class="show-less">Show Less ^</div>
-                        </div>
-                    </div>
-
-
-
-
+    <div class="containerblg">
+        <div class="main-content">
+            <div class="top-articles">
+                <div class="article">
+                    <img src="/assets/images/blogs/mainPage/meta.png" alt="Article 1">
+                    <a href="/pages/blogNews.html"><h3> Mobile Users and Shopping Behavior</h3></a>
+                    <p>86% of people say they leave home without their phone...</p>
                 </div>
-
-
-
-
-
-            </div>
-
-
-
-
-            <div class="section_heading">
-                <h2>Similar Products</h2>
-                <div class="right_side">
-                    <a href="#">
-                        View All
-                        <i class="fa fa-angle-right"></i>
-                    </a>
+                <div class="article">
+                    <img src="/assets/images/blogs/mainPage/gaming.png" alt="Article 2">
+                    <a href="/pages/blogNews.html"><h3> Mobile Users and Shopping Behavior</h3></a>
+                    <p>Regulators are ready to impose fines on mobile carriers...</p>
                 </div>
             </div>
 
-
-
-            <main class="products">
-                <!-- Product grid -->
-                <div class="product">
-                    <img src="../assets/images/products/p7.png" alt="Product 1">
-                    <p><a href="laptopdetails.html">Apple MacBook Air 15" W/ Touch...</a></p>
-                    <button>Add to cart</button>
+            <div class="top-articles">
+                <div class="article">
+                    <img src="/assets/images/blogs/mainPage/southK.png" alt="Article 1">
+                    <h3>Mobile Users and Shopping Behavior</h3>
+                    <p>86% of people say they leave home without their phone...</p>
                 </div>
-                <div class="product">
-                    <img src="../assets/images/products/laptop/image2.png" alt="Product 2">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
+                <div class="article">
+                    <img src="/assets/images/blogs/mainPage/gaming.png" alt="Article 2">
+                    <a href="/pages/blogNews.html"><h3> Mobile Users and Shopping Behavior</h3></a>
+                    <p>Regulators are ready to impose fines on mobile carriers...</p>
                 </div>
-                <div class="product">
-                    <img src="../assets/images/products/laptop/image3.png" alt="Product 1">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
+            </div>
+
+            <div class="recent-posts">
+                <h3>Recent Posts</h3>
+                <div class="post">
+                    <img src="/assets/images/blogs/recentPost/blog1.png" alt="Post 1">
+                    <h3>Encryption Keeps Kids Safe Online...<br>
+                        <small>Policymakers are proposing laws that will weaken encryption.
+                            and many other proposed bills are threatening encryption in the name of keeping kids safe, ...</small>
+                    </h3>
+                    
                 </div>
-                <div class="product">
-                    <img src="../assets/images/products/laptop/image4.png" alt="Product 2">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
+                <div class="post">
+                    <img src="/assets/images/blogs/recentPost/blog2.png" alt="Post 2">
+                    <h3>Apple will finally make the switch to USB-C port... <br>
+                    <small>Be it an iPhone or any other Apple device, they become the talk of town months, Be it an iPhone or any other Apple device, they </small></h3>
                 </div>
-                <div class="product">
-                    <img src="../assets/images/products/laptop/image5.png" alt="Product 1">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
+                <div class="post">
+                    <img src="/assets/images/blogs/recentPost/blog3.png" alt="Post 1">
+                    <h3>Encryption Keeps Kids Safe Online... <br>
+                    <small>
+                        Owning a headphone could mean a different thing for different people. For some, it act as a fashion statement. It’s easy to spot these people, the headphone are almost always just hanging around the neck.
+                    </small></h3>
                 </div>
-                <div class="product">
-                    <img src="../assets/images/products/laptop/image6.png" alt="Product 2">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
+                <div class="post">
+                    <img src="/assets/images/blogs/recentPost/blog4.png" alt="Post 2">
+                    <h3>Apple will finally make the switch to USB-C port...<br>
+                    <small>
+                        On August 17th at 9:30PM UTC, Bitcoin’s price dropped more than 8% in a 10-minute window, to a two-month low of under $26k. This pulled
+                    </small></h3>
                 </div>
-                <div class="product">
-                    <img src="../assets/images/products/laptop/image7.png" alt="Product 1">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
-                </div>
-                <div class="product">
-                    <img src="../assets/images/products/laptop/image8.png" alt="Product 2">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
-                </div>
-                <div class="product">
-                    <img src="../assets/images/products/bs1.png" alt="Product 1">
-                    <p>Apple MacBook Air 15" W/ Touch...</p>
-                    <button>Add to cart</button>
-                </div>
-
-                <!-- More product items -->
-            </main>
-
-
-
-        </div>
-    </section>
-
-
-    <!-- laptop details end -->
-
-
-
-    <section id="shipping_area">
-        <div class="container">
-            <div class="shipping_area" style="padding-top: 40px;">
-                <div class="shipping_content">
-                    <div class="contents tech_content">
-                        <div class="tech_image">
-                            <img src="../assets/images/icons/desktop/icon.png" alt="">
-                        </div>
-                        <div class="tech_text">
-                            <p>Latest and Greatest Tech</p>
-                        </div>
-                    </div>
-                    <div class="contents guarantee_content">
-                        <div class="guarantee_image">
-                            <img src="../assets/images/icons/guarantee/icon.png" alt="">
-                        </div>
-                        <div class="guarantee_text">
-                            <p>Guarantee</p>
-                        </div>
-                    </div>
-                    <div class="contents loader_content">
-                        <div class="loader_image">
-                            <img src="../assets/images/icons/loader/load.png" alt="">
-                        </div>
-                        <div class="loader_text">
-                            <p>Free Shipping over 1000$</p>
-                        </div>
-                    </div>
-                    <div class="contents support_content">
-                        <div class="support_image">
-                            <img src="../assets/images/icons/support/icon.png" alt="">
-                        </div>
-                        <div class="support_text">
-                            <p>24/7 Support</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Add more posts as needed -->
             </div>
         </div>
-    </section>
+        <div class="sidebar">
+            <div class="videos">
+                <h3>Videos</h3>
+                <div class="video">
+                    <img src="/assets/images/blogs/videos/v1.png" alt="Video 1">
+                    <!-- <p>How to connect your iPhone to a laptop...</p> -->
+                </div>
+                <div class="video">
+                    <img src="/assets/images/blogs/videos/v2.png" alt="Video 2">
+                    <!-- <p>How to fix Green Screen of Death on Windows 11...</p> -->
+                </div>
+                <div class="video">
+                    <img src="/assets/images/blogs/videos/v3.jpg" alt="Video 1">
+                    <!-- <p>How to connect your iPhone to a laptop...</p> -->
+                </div>
+                <div class="video">
+                    <img src="/assets/images/blogs/videos/v4.png" alt="Video 2">
+                    <!-- <p>How to fix Green Screen of Death on Windows 11...</p> -->
+                </div>
+                <div class="video">
+                    <img src="/assets/images/blogs/videos/v5.png" alt="Video 2">
+                    <!-- <p>How to fix Green Screen of Death on Windows 11...</p> -->
+                </div>
+                <div class="video">
+                    <img src="/assets/images/blogs/videos/v1.png" alt="Video 1">
+                    <!-- <p>How to connect your iPhone to a laptop...</p> -->
+                </div>
+                <div class="video">
+                    <img src="/assets/images/blogs/videos/v2.png" alt="Video 2">
+                    <!-- <p>How to fix Green Screen of Death on Windows 11...</p> -->
+                </div>
+                <div class="video">
+                    <img src="/assets/images/blogs/videos/v3.jpg" alt="Video 1">
+                    <!-- <p>How to connect your iPhone to a laptop...</p> -->
+                </div>
+                
+                <!-- Add more videos as needed -->
+            </div>
+            
+        </div>
+    </div>
+    <!-- page content end -->
 
     <footer id="footer">
         <div class="top">
