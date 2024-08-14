@@ -1,11 +1,11 @@
 .cart_items{
     position: absolute;
-    top: calc(100% + 20px);
+    top: calc(0% + 50px);
     right: 0;
     width: 512px;
     max-height: 700px;
     background-color: white;
-    padding: 15px;
+    padding: 0px;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     box-shadow: 0px 10px 15px -10px rgb(55, 54, 54);
@@ -34,10 +34,10 @@
     .mid{
         padding: 8px;
         .cart_item_list{
-            height: calc(700px - 253px);
+            
             overflow-y: scroll;
             .cart_item{
-                padding: 16px 32px;
+                // padding: 16px 32px;
                 margin-bottom: 12px;
                 border-radius: 8px;
                 background-color: #fff;
@@ -132,6 +132,7 @@
        display: flex;
        gap: 32px; 
        align-items: center;
+       padding: 15px;
        .left{
         .title{
             font-size: 14px;

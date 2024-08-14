@@ -1,37 +1,37 @@
+(function() {
+    const searchKeywords = [
+        "MacBook Pro ",
+        "AirPods Pro",
+        "Samsung S9",
+        "Tablet",
+        "Xiaomi",
+        "JBL speaker",
+        "Canon",
+        "AirPods Max",
+        "Asus",
+        "MagSafe",
+    ];
 
-window.Alpine = Alpine;
+    document.addEventListener('click', function(event) {
+        const target = event.target;
 
+        if (target.matches('.increment-btn')) {
+            event.preventDefault();
+            const input = target.previousElementSibling;
+            input.value = parseInt(input.value) + 1;
+        }
 
-let search_keywords = [
-    "MacBook Pro ",
-    "AirPods Pro",
-    "Samsung S9",
-    "Tablet",
-    "Xiaomi",
-    "JBL speaker",
-    "Canon",
-    "AirPods Max",
-    "Asus",
-    "MagSafe",
-]
+        if (target.matches('.decrement-btn')) {
+            event.preventDefault();
+            const input = target.nextElementSibling;
+            input.value = parseInt(input.value) - 1;
+        }
 
-
-function increment_cart(){
-    event.preventDefault();
-    let input = event.currentTarget.previousElementSibling;
-    input.value = parseInt(input.value) + 1;
-}
-
-function decrement_cart(){
-    event.preventDefault();
-    let input = event.currentTarget.nextElementSibling;
-    input.value = parseInt(input.value) - 1;
-}
-
-function toggle_nav(){
-    let nav_bar_menue = document.getElementById('nav_bar_menue');
-    if(nav_bar_menue){
-        nav_bar_menue.classList.toggle('active');
-    }
-}
-
+        if (target.matches('.toggle-nav-btn')) {
+            const navBarMenu = document.getElementById('nav_bar_menue');
+            if (navBarMenu) {
+                navBarMenu.classList.toggle('active');
+            }
+        }
+    });
+})();

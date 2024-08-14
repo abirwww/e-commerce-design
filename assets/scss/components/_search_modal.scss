@@ -39,7 +39,8 @@
                 margin-bottom: 48px;
                 .search_form{
                     display: flex;
-                    justify-content: space-between;
+                    justify-content:flex-end;
+                    flex-direction: row;
                     .search_input{
                         border: 1px solid var(--black);
                         flex: 1;

@@ -12,6 +12,10 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <!-- <link rel="stylesheet" href="./assets/fonts/google_icons.css">-->
+     <script src="./assets/plugin/jq.js"></script>
+     <link rel="stylesheet" href="./assets/plugin/owl_carousel/owl.carousel.min.css">
+     <link rel="stylesheet" href="./assets/plugin/owl_carousel/owl.theme.default.min.css">
+     <script src="./assets/plugin/owl_carousel/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="assets/styles/app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -20,14 +24,14 @@
 <body>
     <header id="header">
         <nav class="container">
-            
+
             <div class="nav_body">
                 <div class="nav_toggler" onclick="toggle_nav()">
                     <button>
                         <img src="/assets/images/icons/toggler/menu.png" alt="">
                     </button>
                 </div>
-                
+
                 <div class="logo">
                     <img src="./assets/images/logo/logo.svg" alt="">
                 </div>
@@ -50,10 +54,12 @@
                                     <img src="./assets/images/logo/logo.svg" alt="">
                                 </a>
                             </li>
-                            <li class="nav_close"  onclick="toggle_nav()" ><img src="/assets/images/icons/close/close.png" alt=""></li>
+                            <li class="nav_close" onclick="toggle_nav()"><img src="/assets/images/icons/close/close.png"
+                                    alt=""></li>
                             <li><a href="/">Home</a></li>
                             <li>
-                                <a href="#" onclick="product_category_jumbo_menu.classList.toggle('active')">Products</a>
+                                <a href="#"
+                                    onclick="product_category_jumbo_menu.classList.toggle('active')">Products</a>
                             </li>
                             <li><a href="#">Blog</a></li>
                             <li><a href="#">FAQ</a></li>
@@ -62,273 +68,220 @@
                     </div>
                 </div>
                 <div class="action_menues">
-                        <ul>
-                            <li>
-                                <a onclick="event.preventDefault(); search_modal.classList.toggle('active')" href="#"><img
-                                        src="./assets/images/icons/search.svg" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#" onclick="cart_items.classList.toggle('active')">
-                                    <img src="./assets/images/icons/card.svg" alt="">
-                                </a>
-    
-                                <div class="cart_items" id="cart_items">
-                                    <div class="top">
-                                        <h3 class="cart_top_title">3 items</h3>
-                                    </div>
-                                    <div class="mid">
-                                        <div class="cart_item_list">
-                                            <div class="cart_item">
-                                                <div class="img">
-                                                    <img src="./assets/images/products/cart_image2.png" alt="">
-                                                </div>
-                                                <div class="content">
-                                                    <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA
-                                                        13.3 inch</h3>
-                                                    <h4 class="color">Black</h4>
-                                                    <div class="qty"> x 1</div>
-    
-                                                    <div class="extra_features">
-                                                        <ul>
-                                                            <li>
-                                                                <div class="img">
-                                                                    <img src="./assets/images/icons/truck/truck.png" alt="">
-                                                                </div>
-                                                                <div>
-                                                                    Free Delivery
-                                                                </div>
-                                                            </li>
-    
-                                                            <li>
-                                                                <div class="img">
-                                                                    <img src="./assets/images/icons/verify/verify.png"
-                                                                        alt="">
-                                                                </div>
-                                                                <div>
-                                                                    Guaranteed
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-    
-    
-                                                    <div class="qty_changer">
-                                                        <div class="price">
-                                                            $433.00
-                                                        </div>
-                                                        <div class="qty_updater">
-                                                            <button>
-                                                                <img src="./assets/images/icons/trash/trash.png" alt="">
-                                                            </button>
-    
-                                                            <div class="qty_input">
-                                                                <button onclick="decrement_cart()">
-                                                                    <img src="./assets/images/icons/minus/minus.png" alt="">
-                                                                </button>
-                                                                <input type="number" value="1" min="1">
-                                                                <button onclick="increment_cart()">
-                                                                    <img src="./assets/images/icons/add/add.png" alt="">
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-    
-    
-                                                </div>
+                    <ul>
+                        <li>
+                            <a onclick="event.preventDefault(); search_modal.classList.toggle('active')" href="#"><img
+                                    src="./assets/images/icons/search.svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="cart_items.classList.toggle('active')">
+                                <img src="./assets/images/icons/card.svg" alt="">
+                            </a>
+
+                            <div class="cart_items" id="cart_items">
+                                <div class="top">
+                                    <h3 class="cart_top_title">3 items</h3>
+                                </div>
+                                <div class="mid">
+                                    <div class="cart_item_list">
+                                        <div class="cart_item">
+                                            <div class="img">
+                                                <img src="./assets/images/products/cart_image2.png" alt="">
                                             </div>
-                                            <div class="cart_item">
-                                                <div class="img">
-                                                    <img src="./assets/images/products/cart_image.png" alt="">
-                                                </div>
-                                                <div class="content">
-                                                    <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA
-                                                        13.3 inch</h3>
-                                                    <h4 class="color">Black</h4>
-                                                    <div class="qty"> x 1</div>
-    
-                                                    <div class="extra_features">
-                                                        <ul>
-                                                            <li>
-                                                                <div class="img">
-                                                                    <img src="./assets/images/icons/truck/truck.png" alt="">
-                                                                </div>
-                                                                <div>
-                                                                    Free Delivery
-                                                                </div>
-                                                            </li>
-    
-                                                            <li>
-                                                                <div class="img">
-                                                                    <img src="./assets/images/icons/verify/verify.png"
-                                                                        alt="">
-                                                                </div>
-                                                                <div>
-                                                                    Guaranteed
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-    
-    
-                                                    <div class="qty_changer">
-                                                        <div class="price">
-                                                            $433.00
-                                                        </div>
-                                                        <div class="qty_updater">
-                                                            <button>
-                                                                <img src="./assets/images/icons/trash/trash.png" alt="">
-                                                            </button>
-    
-                                                            <div class="qty_input">
-                                                                <button onclick="decrement_cart()">
-                                                                    <img src="./assets/images/icons/minus/minus.png" alt="">
-                                                                </button>
-                                                                <input type="number" value="1" min="1">
-                                                                <button onclick="increment_cart()">
-                                                                    <img src="./assets/images/icons/add/add.png" alt="">
-                                                                </button>
+                                            <div class="content">
+                                                <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA
+                                                    13.3 inch</h3>
+                                                <h4 class="color">Black</h4>
+                                                <div class="qty"> x 1</div>
+
+                                                <div class="extra_features">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="img">
+                                                                <img src="./assets/images/icons/truck/truck.png" alt="">
                                                             </div>
-                                                        </div>
-                                                    </div>
-    
-    
-                                                </div>
-                                            </div>
-                                            <div class="cart_item">
-                                                <div class="img">
-                                                    <img src="./assets/images/products/cart_image1.png" alt="">
-                                                </div>
-                                                <div class="content">
-                                                    <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA
-                                                        13.3 inch</h3>
-                                                    <h4 class="color">Black</h4>
-                                                    <div class="qty"> x 1</div>
-    
-                                                    <div class="extra_features">
-                                                        <ul>
-                                                            <li>
-                                                                <div class="img">
-                                                                    <img src="./assets/images/icons/truck/truck.png" alt="">
-                                                                </div>
-                                                                <div>
-                                                                    Free Delivery
-                                                                </div>
-                                                            </li>
-    
-                                                            <li>
-                                                                <div class="img">
-                                                                    <img src="./assets/images/icons/verify/verify.png"
-                                                                        alt="">
-                                                                </div>
-                                                                <div>
-                                                                    Guaranteed
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-    
-    
-                                                    <div class="qty_changer">
-                                                        <div class="price">
-                                                            $433.00
-                                                        </div>
-                                                        <div class="qty_updater">
-                                                            <button>
-                                                                <img src="./assets/images/icons/trash/trash.png" alt="">
-                                                            </button>
-    
-                                                            <div class="qty_input">
-                                                                <button onclick="decrement_cart()">
-                                                                    <img src="./assets/images/icons/minus/minus.png" alt="">
-                                                                </button>
-                                                                <input type="number" value="1" min="1">
-                                                                <button onclick="increment_cart()">
-                                                                    <img src="./assets/images/icons/add/add.png" alt="">
-                                                                </button>
+                                                            <div>
+                                                                Free Delivery
                                                             </div>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="img">
+                                                                <img src="./assets/images/icons/verify/verify.png"
+                                                                    alt="">
+                                                            </div>
+                                                            <div>
+                                                                Guaranteed
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+
+                                                <div class="qty_changer">
+                                                    <div class="price">
+                                                        $433.00
+                                                    </div>
+                                                    <div class="qty_updater">
+                                                        <button>
+                                                            <img src="./assets/images/icons/trash/trash.png" alt="">
+                                                        </button>
+
+                                                        <div class="qty_input">
+                                                            <button onclick="decrement_cart()">
+                                                                <img src="./assets/images/icons/minus/minus.png" alt="">
+                                                            </button>
+                                                            <input type="number" value="1" min="1">
+                                                            <button onclick="increment_cart()">
+                                                                <img src="./assets/images/icons/add/add.png" alt="">
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
+
+
                                             </div>
                                         </div>
-                                    </div>
-    
-                                    <div class="bottom">
-                                        <div class="left">
-                                            <h5 class="title">Grand total</h5>
-                                            <h4 class="amount">$543.02</h4>
+                                        <div class="cart_item">
+                                            <div class="img">
+                                                <img src="./assets/images/products/cart_image.png" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA
+                                                    13.3 inch</h3>
+                                                <h4 class="color">Black</h4>
+                                                <div class="qty"> x 1</div>
+
+                                                <div class="extra_features">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="img">
+                                                                <img src="./assets/images/icons/truck/truck.png" alt="">
+                                                            </div>
+                                                            <div>
+                                                                Free Delivery
+                                                            </div>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="img">
+                                                                <img src="./assets/images/icons/verify/verify.png"
+                                                                    alt="">
+                                                            </div>
+                                                            <div>
+                                                                Guaranteed
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+
+                                                <div class="qty_changer">
+                                                    <div class="price">
+                                                        $433.00
+                                                    </div>
+                                                    <div class="qty_updater">
+                                                        <button>
+                                                            <img src="./assets/images/icons/trash/trash.png" alt="">
+                                                        </button>
+
+                                                        <div class="qty_input">
+                                                            <button onclick="decrement_cart()">
+                                                                <img src="./assets/images/icons/minus/minus.png" alt="">
+                                                            </button>
+                                                            <input type="number" value="1" min="1">
+                                                            <button onclick="increment_cart()">
+                                                                <img src="./assets/images/icons/add/add.png" alt="">
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
                                         </div>
-                                        <div class="right">
-                                            <a href="">
-                                                <span class="title">
-                                                    Proceed to Cart
-                                                </span>
-                                                <img src="./assets/images/icons/addToCart/shopping-cart.png" alt="">
-                                            </a>
-                                        </div>
+                            
                                     </div>
                                 </div>
-                            </li>
-    
-                            <li>
-                                <a href="#" onclick="user_drop_down_actions.classList.toggle('active')"><img
-                                        src="./assets/images/icons/profile.svg" alt=""></a>
-                                <div id="user_drop_down_actions" class="user_drop_down_actions">
-                                    <ul>
-                                        <li>
-                                            <a href="./pages/personaldata.html">
-                                                <div class="icon">
-                                                    <img src="./assets/images/icons/profile_icons/profile_icon_1.png"
-                                                        alt="">
-                                                </div>
-                                                <div class="content">
-                                                    <h4>Jimmy Smith</h4>
-                                                    <p>smith1996@gmail.com</p>
-                                                </div>
-                                            </a>
-                                            <a href="">
-                                                <div class="icon">
-                                                    <img src="./assets/images/icons/profile_icons/profile_icon_2.png"
-                                                        alt="">
-                                                </div>
-                                                <div class="content">
-                                                    <h4>Orders</h4>
-                                                </div>
-                                            </a>
-                                            <a href="">
-                                                <div class="icon">
-                                                    <img src="./assets/images/icons/profile_icons/profile_icon_3.png"
-                                                        alt="">
-                                                </div>
-                                                <div class="content">
-                                                    <h4>Wish List</h4>
-                                                </div>
-                                            </a>
-                                            <a href="./pages/payments.html">
-                                                <div class="icon">
-                                                    <img src="./assets/images/icons/profile_icons/profile_icon_4.png"
-                                                        alt="">
-                                                </div>
-                                                    <div style="display: inline-block;" class="content"><h4>Payments</h4>
-                                                 </div>
-                                                
-                                            </a>
-                                            <a href="">
-                                                <div class="icon">
-                                                    <img src="./assets/images/icons/profile_icons/profile_icon_5.png"
-                                                        alt="">
-                                                </div>
-                                                <div class="content">
-                                                    <h4>Log out</h4>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
+
+                                <div class="bottom">
+                                    <div class="left">
+                                        <h5 class="title">Grand total</h5>
+                                        <h4 class="amount">$543.02</h4>
+                                    </div>
+                                    <div class="right">
+                                        <a href="./pages/payments.html">
+                                            <span class="title">
+                                                Proceed to Cart
+                                            </span>
+                                            <img src="./assets/images/icons/addToCart/shopping-cart.png" alt="">
+                                        </a>
+                                    </div>
                                 </div>
-                            </li>
-                        </ul>
-                    
-                    
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="#" onclick="user_drop_down_actions.classList.toggle('active')"><img
+                                    src="./assets/images/icons/profile.svg" alt=""></a>
+                            <div id="user_drop_down_actions" class="user_drop_down_actions">
+                                <ul>
+                                    <li>
+                                        <a href="./pages/personaldata.html">
+                                            <div class="icon">
+                                                <img src="./assets/images/icons/profile_icons/profile_icon_1.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h4>Jimmy Smith</h4>
+                                                <p>smith1996@gmail.com</p>
+                                            </div>
+                                        </a>
+                                        <a href="/pages/order.html">
+                                            <div class="icon">
+                                                <img src="./assets/images/icons/profile_icons/profile_icon_2.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h4>Orders</h4>
+                                            </div>
+                                        </a>
+                                        <a href="/pages/wishlist.html">
+                                            <div class="icon">
+                                                <img src="./assets/images/icons/profile_icons/profile_icon_3.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h4>Wish List</h4>
+                                            </div>
+                                        </a>
+                                        <a href="./pages/payments.html">
+                                            <div class="icon">
+                                                <img src="./assets/images/icons/profile_icons/profile_icon_4.png"
+                                                    alt="">
+                                            </div>
+                                            <div style="display: inline-block;" class="content">
+                                                <h4>Payments</h4>
+                                            </div>
+
+                                        </a>
+                                        <a href="javascript:void(0)" onclick="loginFormOpen()">
+                                            <div class="icon">
+                                                <img src="./assets/images/icons/profile_icons/profile_icon_5.png"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="content">
+                                                <div>
+                                                    <h4>Log in</h4>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -618,7 +571,7 @@
                     <div x-show="search_key.length == 0" class="suggested_keywords">
                         <div class="keyword_group">
                             <h3 class="heading">The Most Searched Items</h3>
-                            <ul class="link_list" x-data="{search_keywords}">
+                            <ul class="link_list">
                                 <template x-for="skeyword in search_keywords">
                                     <li>
                                         <a href="#" x-text="skeyword"></a>
@@ -628,7 +581,7 @@
                         </div>
                         <div class="keyword_group">
                             <h3 class="heading">Most used keywords</h3>
-                            <ul class="link_list" x-data="{search_keywords}">
+                            <ul class="link_list">
                                 <template x-for="skeyword in search_keywords">
                                     <li>
                                         <a href="#" x-text="skeyword"></a>
@@ -692,7 +645,7 @@
             </div>
         </div>
     </section>
-    
+
 
     <section id="banner">
         <div class="container">
@@ -726,18 +679,17 @@
                                         [ './assets/images/products/pd5.png','Gaming'], 
                                         ['./assets/images/products/pd6.png','Smart Watch']
                                     ] 
-                        }"
-                class="top_categories">
+                        }" class="top_categories">
                 <template x-for="(product, index) in products" :key="index">
                     <a href="pages\category.html">
-                    <div class="item">
-                        <div class="img">
-                            <img :src="product[0]" alt="Product Image">
+                        <div class="item">
+                            <div class="img">
+                                <img :src="product[0]" alt="Product Image">
+                            </div>
+                            <div class="title">
+                                <h3 x-text="product[1]"> </h3>
+                            </div>
                         </div>
-                        <div class="title">
-                            <h3 x-text="product[1]"> </h3>
-                        </div>
-                    </div>
                     </a>
                 </template>
             </div>
@@ -757,69 +709,2376 @@
                     </div>
 
                 </div>
-                <div class="right">
-                    <div x-data="{ products: [
-                                        ['./assets/images/products/ps1.png','Logitech G502 Gaming Mouse'],
-                                        [ './assets/images/products/ps2.png','NPET Wired Gaming Keyboard'], 
-                                        ['./assets/images/products/ps3.png','Apple Watch Series Apples'], 
-                                        ['./assets/images/products/ps4.png','Apple 2022 MacBook Air pads'],
-                                    ] 
-                        }" class="product_list">
-                        <!-- <template x-for="i in 4" x-key="i">
-                            <div class="product_item product_v1">
-                                <div class="discount">
-                                    50%
-                                </div>
-                                <div class="img">
-                                    <img src="./assets/images/products/p6.png" alt="mouse">
-                                </div>
-                                <div class="title">
-                                    <h2>Logitech G502 Gaming Mouse</h2>
-                                </div>
-                                <div class="price_area">
-                                    <div class="del_price">
-                                        <del>
-                                            $30
-                                        </del>
-                                    </div>
-                                    <div class="price">
-                                        $19
-                                    </div>
-                                </div>
-                            </div>
-                        </template> -->
-
-                        <template x-for="(product, index) in products" :key="index">
-                            <div class="product_item product_v1">
-                                <div class="discount">
-                                    50%
-                                </div>
-                                <div class="img">
-                                    <img :src="product[0]" alt="Product Image">
-                                </div>
-                                <div>
-                                    <h3 class="title"  x-text="product[1]"> </h3>
-                                </div>
-                                <div class="price_area">
-                                    <div class="del_price">
-                                        <del>
-                                            $30
-                                        </del>
-                                    </div>
-                                    <div class="price">
-                                        $19
-                                    </div>
-                                </div>
-                            </div>
-                        </template>
-
-                    </div>
-                    <div class="navigation">
-                        <div class="left">
-                            <img src="./assets/images/icons/left-right_arrow/arrow.png" alt="">
-                        </div>
-                    </div>
-                </div>
+               <div class="right-owl owl-carousel top_sales_product_slide">
+                <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div><div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div><div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps1.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right">
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps2.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps3.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+                  <div class="right" >
+                    <div class="discount-badge">-50%</div>
+                    <img src="./assets/images/products/ps4.png" alt="Logitech G502 Gaming Mouse">
+                    <div class="product-name">Logitech G502 Gaming Mouse</div>
+                    <div class="price">$38.00</div>
+                    <div class="discounted-price">$19.00</div>
+                  </div>
+               </div>
+                    
+            
+                
+                
             </div>
         </div>
     </section>
@@ -1384,9 +3643,9 @@
 
 
     <!-- product Detail rtart -->
-     <section>
-        
-     </section>
+    <section>
+
+    </section>
     <!-- product Detail rtart -->
 
 
@@ -1516,9 +3775,75 @@
         </div>
     </footer>
 
+    <style>
+        .loginform {
+            position: absolute;
+            width: 40%;
+            height: 60%;
+            top: 50%;
+            left: 50%;
+            backdrop-filter: blur(2px);
+            padding: 10px;
+            line-height: 20px;
+            z-index: 999999999;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+        }
+
+        .d-none {
+            display: none;
+        }
+        label{
+            padding: 5px;
+        }
+    </style>
+
+    <div class="loginform d-none" id="loginform">
+        
+        <h2 style="text-align: center;background-color: #a5a49e27;">Log in to Tech Heim</h2>
+        <form style="background-color: #1a191773;" action="">
+            <label type="text" for="name">User Name</label>
+            <input type="text" name="" id="" placeholder="User Name">
+            <label  for="name">User E-mail</label>
+            <input type="email" name="" id="" placeholder="User Mail">
+            <label  for="pswd">User Password</label>
+            <input type="text" name="" id="" placeholder="User Password">
+            <button type="submit" onclick="loginFormClose()">Submit</button>
+        </form>
+        
+    </div>
+
+    <script>
+        function loginFormOpen() {
+            let target = document.getElementById('loginform')
+            target.classList.remove('d-none')
+        }
+        function loginFormClose() {
+            let target = document.getElementById('loginform')
+            target.classList.add('d-none')
+        }
+    </script>
+    <!-- Set up your HTML -->
+    
+
+    <div class="owl-carousel">
+        <div> Your Content </div>
+        <div> Your Content </div>
+        <div> Your Content </div>
+        <div> Your Content </div>
+        <div> Your Content </div>
+        <div> Your Content </div>
+        <div> Your Content </div>
+    </div>
+      <script>
+        $(document).ready(function(){
+            $(".top_sales_product_slide").owlCarousel();
+          });
+      </script>
 
     <script src="./js/plugins/alpine.js"></script>
     <script src="./js/app.js"></script>
+
 </body>
 
 </html>

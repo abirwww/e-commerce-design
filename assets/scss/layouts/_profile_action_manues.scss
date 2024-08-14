@@ -29,11 +29,19 @@
                 display: flex;
                 gap: 10px;
                 align-items: center;
+                .content{
+                   
+                }
 
                 &:hover{
                     .content{
                         h4{
                             color: var(--primary);
+                        }
+
+                        #pop{
+                            border: 1px solid red;
+                            color: red;
                         }
                     }
                 }
@@ -54,22 +62,32 @@
                                     margin: 0;
                                     line-height: 18px;
                                     align-items: center;
-
+                                   
                                     &.block{
                                         color: var(--primary);
                                     }
                                 }
+                                
                                 p{
                                     font-size: 14px;
                                     margin: 0;
                                     margin-bottom: 9px;
                                     list-style: 14px;
                                 }
-                            }
+                            } 
                         }
                     }
                 }
             }
         }
+    }
+}
+
+#pop{
+    border: 1px solid red;
+    color: red;
+display: none;
+    &.active{
+        display: block;
     }
 }
