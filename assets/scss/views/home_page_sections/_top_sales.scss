@@ -12,8 +12,10 @@
     
 
     @include xs{
-        grid-template-columns: 1fr;
-        // display: inline-block;
+        // grid-template-columns: 1fr;
+        // display:none;
+        display: block;
+        
     }
 
     .left{
@@ -57,6 +59,9 @@
        font-family: Arial, sans-serif; 
        background-color: white;
        margin-top: 10%;
+       @include xs{
+        margin-left: 25px;
+       }
     }
     .discount-badge {
         background-color: grey;
@@ -67,6 +72,9 @@
         position: absolute;
         top: 40px;
         left: 0px;
+        @include xs{
+          left: 25px;
+        }
       }
       img {
         width: 100%;

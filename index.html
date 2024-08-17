@@ -3837,7 +3837,34 @@
     </div>
       <script>
         $(document).ready(function(){
-            $(".top_sales_product_slide").owlCarousel();
+            $(".top_sales_product_slide").owlCarousel({
+              loop:true,
+              margin:10,
+              responsiveClass:true,
+              responsive:{
+                  0:{
+                      items:1,
+                      nav:true,
+                      loop: true,
+                      autoplay: true,
+                      autoplayHoverPause: true
+                  },
+                  600:{
+                      items:2,
+                      nav:true,
+                      loop: true,
+                      autoplay: true,
+                      autoplayHoverPause: true
+                  },
+                  1000:{
+                      items:3,
+                      nav:true,
+                      loop: true,
+                      autoplay: true,
+                      autoplayHoverPause: true
+                  }
+              }
+            });
           });
       </script>
 

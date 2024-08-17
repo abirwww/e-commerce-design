@@ -179,6 +179,9 @@
 
 .product_list{
     padding-top: 20px;
+    @include xs{
+        margin-left: 15px;
+    }
     hr{
         @include xs{
             display: none;

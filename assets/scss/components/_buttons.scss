@@ -8,6 +8,9 @@
     &.btn_v1{
         background-color: var(--primary);
         color: var(--white);
+        @include xs{
+            margin-left: 25px;
+        }
         &:hover{
         background-color: var(--secondary);
         }
