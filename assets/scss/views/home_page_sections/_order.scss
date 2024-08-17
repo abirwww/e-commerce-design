@@ -6,18 +6,28 @@
         .sub_content{
             display: flex;
             gap: 100px;
+            @include xs{
+                display: block;
+            }
         }
         .image_content{
             .image{
                 display: flex;
                 gap: 20px;
                 padding: 10px;
+                @include xs{
+                    display: block;
+                    margin-left: 0px;
+                }
             }
         }
     }
     .content_numeric_info{
         display: flex;
         gap: 100px;
+        @include xs{
+            display: block;
+        }
         .text_n_numeric{
             
         }

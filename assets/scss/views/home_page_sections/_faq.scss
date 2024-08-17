@@ -54,7 +54,9 @@
     padding: 20px;
     display: flex;
     gap: 80px;
-
+@include xs{
+    display: block;
+}
     h2 {
         font-size: 20px;
         margin-top: 0;

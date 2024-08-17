@@ -1,6 +1,9 @@
 .content_text{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    @include xs{
+        display: block;
+    }
     .left_content{
         padding: 20px;
         .user_payment, .security, .contact, .wish, .discount, .user_bag, .user_data, .user{
@@ -57,6 +60,7 @@
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
+            margin-bottom: 10px;
           }
           
           button {

@@ -1,10 +1,10 @@
 #productIconsOnCategory{
     .containertwo{
-        display: flex; 
+        display: grid;
         padding: 20px; 
-        justify-content: space-between;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         @include xs(){
-            display: block;
+            grid-template-columns: 1fr 1fr 1fr;
          }
         .product_icon{
             .product_content{

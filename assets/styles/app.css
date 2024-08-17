@@ -179,6 +179,11 @@ h3 {
   justify-content: flex-end;
   flex-direction: row;
 }
+@media (min-width: 0px) and (max-width: 575.9px) {
+  #search_modal .search_overly .search_card .top .search_form {
+    display: block;
+  }
+}
 #search_modal .search_overly .search_card .top .search_form .search_input {
   border: 1px solid var(--black);
   flex: 1;
@@ -215,6 +220,8 @@ h3 {
 @media (min-width: 0px) and (max-width: 575.9px) {
   #search_modal .search_overly .search_card .top .search_form .icon_part {
     display: block;
+    width: 800px;
+    transform: translate(185px, -49px);
   }
 }
 #search_modal .search_overly .search_card .top .search_form .icon_part .close {
@@ -898,11 +905,6 @@ nav .nav_body .action_menues ul li {
   gap: 20px;
   align-items: center;
 }
-@media (min-width: 0px) and (max-width: 575.9px) {
-  .cart_items .mid .cart_item_list .cart_item {
-    flex-direction: column;
-  }
-}
 @media (min-width: 576px) and (max-width: 767.9px) {
   .cart_items .mid .cart_item_list .cart_item {
     flex-direction: column;
@@ -1115,7 +1117,6 @@ footer .right ul li a {
   position: relative;
   color: black;
 }
-
 .banner_content {
   display: grid;
   grid-template-columns: 500px 1fr;
@@ -1818,13 +1819,13 @@ footer .right ul li a {
   gap: 10px;
 }
 #productIconsOnCategory .containertwo {
-  display: flex;
+  display: grid;
   padding: 20px;
-  justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 @media (min-width: 0px) and (max-width: 575.9px) {
   #productIconsOnCategory .containertwo {
-    display: block;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media (min-width: 0px) and (max-width: 575.9px) {
@@ -1894,6 +1895,12 @@ body {
   justify-content: space-between;
   margin-bottom: 20px;
 }
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .main-content .top-articles {
+    display: block;
+    margin-left: 80px;
+  }
+}
 .main-content .top-articles .article {
   background: white;
   padding: 20px;
@@ -1945,6 +1952,11 @@ body {
 
 .sidebar {
   flex: 1;
+}
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .sidebar {
+    display: none;
+  }
 }
 .sidebar .videos {
   background: white;
@@ -2149,6 +2161,11 @@ main .leave-comment form button:hover {
   display: flex;
   gap: 80px;
 }
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .faq-content {
+    display: block;
+  }
+}
 .faq-content h2 {
   font-size: 20px;
   margin-top: 0;
@@ -2168,6 +2185,11 @@ main .leave-comment form button:hover {
   display: grid;
   text-align: center;
   grid-template-columns: 1fr 1fr 1fr;
+}
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .main_content {
+    display: block;
+  }
 }
 .main_content p {
   color: rgb(196, 193, 193);
@@ -2251,6 +2273,12 @@ button[type=submit] {
   display: flex;
   justify-content: space-between;
 }
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .message_content {
+    display: block;
+    padding: 0;
+  }
+}
 .message_content .left_content {
   width: 400px;
 }
@@ -2281,11 +2309,21 @@ button[type=submit] {
   grid-template-columns: 1fr 1fr;
   gap: 50px;
 }
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .full_content {
+    display: block;
+  }
+}
 
 .cart .item {
   display: flex;
   padding: 20px 0;
   border-bottom: 1px solid #ccc;
+}
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .cart .item {
+    display: block;
+  }
 }
 .cart .item img {
   width: 100%;
@@ -2368,11 +2406,21 @@ button[type=submit] {
   display: flex;
   justify-content: space-between;
 }
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .checkout {
+    display: block;
+  }
+}
 .checkout .shipping-details {
   width: 45%;
   background: rgba(173, 216, 230, 0.2);
   padding: 20px;
   border-radius: 5px;
+}
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .checkout .shipping-details {
+    width: 100%;
+  }
 }
 .checkout .shipping-details h2 {
   margin-top: 0;
@@ -2404,12 +2452,22 @@ button[type=submit] {
   padding: 20px;
   border-radius: 5px;
 }
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .checkout .order-summary {
+    width: 100%;
+  }
+}
 .checkout .order-summary h2 {
   margin-top: 0;
 }
 .checkout .order-summary .item {
   display: flex;
   margin-bottom: 10px;
+}
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .checkout .order-summary .item {
+    display: block;
+  }
 }
 .checkout .order-summary .item img {
   width: 100%;
@@ -2493,6 +2551,12 @@ button[type=submit] {
   max-width: 80%;
   z-index: 10;
 }
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .checkout .order-summary .popup {
+    width: 300px;
+    height: 500px;
+  }
+}
 .checkout .order-summary .popup .button_content {
   display: flex;
   justify-content: space-between;
@@ -2546,6 +2610,11 @@ button[type=submit] {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .content_text {
+    display: block;
+  }
+}
 .content_text .left_content {
   padding: 20px;
 }
@@ -2593,6 +2662,7 @@ button[type=submit] {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
+  margin-bottom: 10px;
 }
 .content_text .middle_content button {
   background-color: #4CAF50;
@@ -2631,6 +2701,11 @@ button[type=submit] {
   height: 70%;
   width: 100%;
 }
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .input-container img {
+    display: none;
+  }
+}
 
 .content_text_order {
   display: flex;
@@ -2640,14 +2715,30 @@ button[type=submit] {
   display: flex;
   gap: 100px;
 }
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .content_text_order .middle_content .content .sub_content {
+    display: block;
+  }
+}
 .content_text_order .middle_content .content .image_content .image {
   display: flex;
   gap: 20px;
   padding: 10px;
 }
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .content_text_order .middle_content .content .image_content .image {
+    display: block;
+    margin-left: 0px;
+  }
+}
 .content_text_order .middle_content .content_numeric_info {
   display: flex;
   gap: 100px;
+}
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .content_text_order .middle_content .content_numeric_info {
+    display: block;
+  }
 }
 .products {
   display: flex;
@@ -2660,6 +2751,11 @@ button[type=submit] {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+@media (min-width: 0px) and (max-width: 575.9px) {
+  .notification_content .content_straight .mail_content {
+    display: block;
+  }
 }
 .notification_content .content_straight .mail_content body {
   background-color: #f9e9e9;

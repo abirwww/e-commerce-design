@@ -16,7 +16,10 @@
             //     content: "\f105";
             //     font-family: var(--fa-style-family, "Font Awesome 6 Free");
             //     font-weight: 900;
-            // }    
+            // }  
+            @include xs{
+                
+            }  
         } 
     }
 }

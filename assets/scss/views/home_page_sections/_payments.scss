@@ -22,6 +22,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
+    @include xs{
+        display: block;
+    }
 }
 
 .cart {
@@ -29,6 +32,9 @@
         display: flex;
         padding: 20px 0;
         border-bottom: 1px solid #ccc;
+        @include xs{
+            display: block;
+        }
         img {
             width: 100%;
             margin-right: 20px;

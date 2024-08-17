@@ -41,6 +41,9 @@
                     display: flex;
                     justify-content:flex-end;
                     flex-direction: row;
+                    @include xs{
+                        display: block;
+                    }
                     .search_input{
                         border: 1px solid var(--black);
                         flex: 1;
@@ -73,6 +76,8 @@
                         cursor: pointer;
                         @include xs{
                             display: block;
+                            width: 800px;
+                            transform: translate(185px, -49px);
                         }
                         .close{
                             height: 25px;

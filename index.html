@@ -33,11 +33,11 @@
                 </div>
 
                 <div class="logo">
-                    <img src="./assets/images/logo/logo.svg" alt="">
+                  <a href="/index.html"><img src="./assets/images/logo/logo.svg" alt=""></a>  
                 </div>
 
-                <ul class="nav_link_lg">
-                    <li><a href="/">Home</a></li>
+                <ul class="nav_link_lg ">
+                    <li><a href="/index.html">Home</a></li>
                     <li>
                         <a href="#" onclick="product_category_jumbo_menu.classList.toggle('active')">Products</a>
                     </li>
@@ -56,14 +56,14 @@
                             </li>
                             <li class="nav_close" onclick="toggle_nav()"><img src="/assets/images/icons/close/close.png"
                                     alt=""></li>
-                            <li><a href="/">Home</a></li>
+                            <li><a href="/index.html">Home</a></li>
                             <li>
                                 <a href="#"
                                     onclick="product_category_jumbo_menu.classList.toggle('active')">Products</a>
                             </li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="./pages/blog.html">Blog</a></li>
+                            <li><a href="./pages/faq.html">FAQ</a></li>
+                            <li><a href="./pages/contuctus.html">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -3867,6 +3867,13 @@
             });
           });
       </script>
+
+      <script>
+        function toggle_nav() {
+          const navMenu = document.getElementById("nav_bar_menue");
+          navMenu.classList.toggle("active"); // Toggles the class "active" on the menu
+        }
+        </script>
 
     <script src="./js/plugins/alpine.js"></script>
     <script src="./js/app.js"></script>

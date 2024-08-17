@@ -53,6 +53,11 @@ body {
         justify-content: space-between;
         margin-bottom: 20px;
 
+        @include xs{
+            display: block;
+            margin-left: 80px;
+        }
+
         .article {
             background: white;
             padding: 20px;
@@ -115,7 +120,9 @@ body {
 
 .sidebar {
     flex: 1;
-
+@include xs{
+    display: none;
+}
     .videos {
         background: white;
         padding: 20px;
